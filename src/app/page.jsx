@@ -18,14 +18,13 @@ import { BsArrowRightCircleFill } from "react-icons/bs";
 
 //react image
 // import heroImage from './assets/heroImage.webp';
-import laptopImg from './assets/laptop_img.webp';
-import cardOne from './assets./card-1.png';
-import cardTwo from './assets./card-2.png';
-import cardThree from './assets./card-3.png';
-import cardFour from './assets./card-4.png';
-import checkMark from './assets/checkMark.webp'
-import testmonials1 from './assets/testmonials1.png'
-import quotation from './assets/quotation.png'
+// import laptopImg from './assets/laptop_img.webp';
+// import cardTwo from './assets/card-2.png';
+// import cardThree from './assets./card-3.png';
+// import cardFour from './assets./card-4.png';
+// import checkMark from './assets/checkMark.webp'
+// import testmonials1 from './assets/testmonials1.png'
+// import quotation from './assets/quotation.png'
 
 
 //react slick
@@ -179,7 +178,7 @@ export default function Home() {
               </div>
               <div className="col-12 col-lg-7 hero-right">
                 <figure>
-                  <Image src={laptopImg} width={672} height={402} alt="logo" />
+                  <Image src="/laptop_img.webp" width={672} height={402} alt="logo" />
                 </figure>
 
               </div>
@@ -197,12 +196,12 @@ export default function Home() {
               {/* card */}
               <div className="card">
                 <figure className="card-figure">
-                  <Image src={cardOne} width={255} height={197} alt="logo" />
+                  <Image src="/card-1.webp" width={255} height={197} alt="logo" />
                 </figure>
 
                 <div className="card-body card-styleing">
                   <h5 className="card-title">Multtinqual Publishing</h5>
-                  <p className="card-text">A prine’ review/c satillaction</p>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
                   <Link href="#" className="btn card-btn">
                     <GoArrowUpRight /></Link>
                 </div>
@@ -210,12 +209,12 @@ export default function Home() {
               {/* card */}
               <div className="card">
                 <figure className="card-figure">
-                  <Image src={cardTwo} width={255} height={197} alt="logo" className="cardimg" />
+                  <Image src='/card-2.webp' width={255} height={197} alt="logo" className="cardimg" />
                 </figure>
 
                 <div className="card-body card-styleing">
                   <h5 className="card-title">Custom Content Editor</h5>
-                  <p className="card-text">A prine’ review/c satillaction</p>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
                   <Link href="#" className="btn card-btn">
                     <GoArrowUpRight /></Link>
                 </div>
@@ -223,12 +222,12 @@ export default function Home() {
               {/* card */}
               <div className="card">
                 <figure className="card-figure">
-                  <Image src={cardThree} width={255} height={197} alt="logo" />
+                  <Image src='/card-3.webp' width={255} height={197} alt="logo" />
                 </figure>
 
                 <div className="card-body card-styleing">
                   <h5 className="card-title">Monetization Tool</h5>
-                  <p className="card-text">A prine’ review/c satillaction</p>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
                   <Link href="#" className="btn card-btn">
                     <GoArrowUpRight /></Link>
                 </div>
@@ -236,12 +235,12 @@ export default function Home() {
               {/* card */}
               <div className="card">
                 <figure className="card-figure">
-                  <Image src={cardFour} width={255} height={197} alt="logo" />
+                  <Image src='/card-4.webp' width={255} height={197} alt="logo" />
                 </figure>
 
                 <div className="card-body card-styleing">
                   <h5 className="card-title">SEO & Analytics</h5>
-                  <p className="card-text">A prine’ review/c satillaction</p>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
                   <Link href="#" className="btn card-btn">
                     <GoArrowUpRight /></Link>
                 </div>
@@ -280,15 +279,15 @@ export default function Home() {
 
 
                     <div className="quotation-top">
-                      <Image src={quotation} width={59} height={59} alt="logo" />
+                      <Image src="/quotation.webp" width={59} height={59} alt="quotation" />
                     </div>
                     <div className="quotation-bottom">
-                      <Image src={quotation} width={59} height={59} alt="logo" />
+                      <Image src="/quotation.webp" width={59} height={59} alt="logo" />
                     </div>
 
                     <div className="single-card-left">
                       <div className="">
-                        <Image src={testmonials1} width={210} height={210} alt="logo" />
+                        <Image src='/testmonials1.png' width={210} height={210} alt="logo" />
                       </div>
 
                     </div>
@@ -317,15 +316,15 @@ export default function Home() {
 
 
                     <div className="quotation-top">
-                      <Image src={quotation} width={59} height={59} alt="logo" />
+                       <Image src="/quotation.webp" width={59} height={59} alt="quotation" />
                     </div>
                     <div className="quotation-bottom">
-                      <Image src={quotation} width={59} height={59} alt="logo" />
+                    <Image src="/quotation.webp" width={59} height={59} alt="logo" />
                     </div>
 
                     <div className="single-card-left">
                       <div className="">
-                        <Image src={testmonials1} width={210} height={210} alt="logo" />
+                        <Image src='/testmonials1.png' width={210} height={210} alt="logo" />
                       </div>
                     </div>
                     <div className="single-card-right">
@@ -372,19 +371,19 @@ export default function Home() {
                       <p className="price">$0 <span>/mo</span></p>
                       <article className="features">
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                          <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Local Language Support</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                       <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Built-In SEO for Nigerian Search Trends</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                 <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Editorial Tools for Journalists</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                  <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Social Media Integration</p>
                         </div>
                       </article>
@@ -404,31 +403,31 @@ export default function Home() {
                       <p className="price">$55<span>/mo</span></p>
                       <article className="features">
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+            <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Local Language Support</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                  <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Built-In SEO for Nigerian Search Trends</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                   <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Unlimited Content Publishing</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                 <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Advanced Media Management</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                          <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Monetization Tools</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                   <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Data & Analytics Suite</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                 <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>24/7 Support</p>
                         </div>
                       </article>
@@ -448,29 +447,28 @@ export default function Home() {
                       <p className="price">$105 <span>/mo</span></p>
                       <article className="features ">
                         <div className="feature-item d-flex">
-
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+    <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Advanced Editorial Tools</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                           <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Integrated Monetization & Analytics</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                         <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Bulletproof Security</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                  <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>API & Third-Party Integration</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                             <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
 
                           <p>Training & Onboarding</p>
                         </div>
                         <div className="feature-item d-flex">
-                          <Image src={checkMark} width={20} height={20} alt="logo" />
+                          <Image src='/check-mark.webp' width={20} height={20} alt="logo" />
                           <p>Government & NGO Compliance</p>
                         </div>
                       </article>
