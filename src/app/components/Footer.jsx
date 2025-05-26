@@ -72,7 +72,7 @@ function Footer() {
                     </div>
                 </div>
                 <hr className="" />
-                <p className="text-center lower-footer">Copyright © 2025,inknaijaa&#45;Powered by Shopify</p>
+                <p className="text-center lower-footer">Copyright © 2025,inknaijaa</p>
             </div>
 
         </footer>
