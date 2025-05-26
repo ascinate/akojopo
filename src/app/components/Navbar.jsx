@@ -1,0 +1,54 @@
+'use client';
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+function Navbar() {
+    const mianmenu = [
+        { id: 1, title: 'Home', href: '/' },
+        { id: 2, title: 'About', href: '/about' },
+        { id: 3, title: 'Features', href: '/features' },
+        { id: 4, title: 'Pricing', href: '/pricing' },
+        { id: 5, title: 'Blog', href: '/blog' },
+        { id: 6, title: 'Features', href: '/Support' },
+        { id: 7, title: 'Pricing', href: '/Login' },
+        { id: 8, title: 'Blog', href: '/Signup' },
+    ];
+    const pathname = usePathname();
+    return (
+
+        
+        <>
+            <nav className="navbar navbar-expand-lg navbar-light">
+                <div className="container">
+                    <Link className="navbar-brand" href="/">
+                        <Image src='/logo1.svg' width={55} height={65} alt="logo" />
+                    </Link>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+                            {mianmenu.map((page) => {
+                                const isActive = pathname === page.href;
+
+                                return (
+                                    <li key={page.id}>
+                                        <Link
+                                            href={page.href}
+                                            className={`nav-link ${isActive ? 'active' : ''}`}
+                                        >
+                                            {page.title}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </>
+    );
+
+}
+export default Navbar;
