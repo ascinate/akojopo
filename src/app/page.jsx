@@ -29,9 +29,9 @@ var settingsTwo = {
   margin: 20,
   autoplay: true,
   speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  initialSlide: 0,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 4,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
@@ -166,7 +166,7 @@ export default function Home() {
               </div>
               <div className="col-lg-7 hero-right">
                 <figure className="text-end d-block">
-                  <Image src="/laptop_img.webp" width={672} height={402} alt="logo" />
+                  <Image src="/laptop_img.png" width={672} height={402} alt="logo" />
                 </figure>
 
               </div>

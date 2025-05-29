@@ -11,7 +11,7 @@ var settings = {
     speed: 500,
     slidesToShow:4,
     slidesToScroll:4,
-    initialSlide: 0,
+    initialSlide: 4,
     autoplaySpeed: 2000,
     pauseOnHover: true, 
     responsive: [

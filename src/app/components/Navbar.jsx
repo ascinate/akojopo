@@ -13,9 +13,9 @@ function Navbar() {
     ];
 
     const mianright = [
-        { id: 6, title: 'Support', href: '/Support' },
-        { id: 7, title: 'Login', href: '/Login' },
-        { id: 8, title: 'Signup', href: '/Signup' },
+        { id: 6, title: 'Support', href: '/support' },
+        { id: 7, title: 'Login', href: '/login' },
+        { id: 8, title: 'Signup', href: '/signup' },
     ];
     const pathname = usePathname();
     return (
