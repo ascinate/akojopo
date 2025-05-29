@@ -15,87 +15,13 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-
-//react image
-// import heroImage from './assets/heroImage.webp';
-// import laptopImg from './assets/laptop_img.webp';
-// import cardTwo from './assets/card-2.png';
-// import cardThree from './assets./card-3.png';
-// import cardFour from './assets./card-4.png';
-// import checkMark from './assets/checkMark.webp'
-// import testmonials1 from './assets/testmonials1.png'
-// import quotation from './assets/quotation.png'
-
+import FeatureSlider from "./components/FeatureSlider";
 
 //react slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer";
-
-var settings = {
-  dots: true,
-  infinite: true,
-  margin: 20,
-  autoplay: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  initialSlide: 0,
-  autoplaySpeed: 2000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true,
-        margin: 20,
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 668,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    }
-  ]
-};
-
 
 var settingsTwo = {
   dots: true,
@@ -160,40 +86,100 @@ var settingsTwo = {
   ]
 };
 
+var settings = {
+  dots: true,
+  infinite: true,
+  margin: 20,
+  autoplay: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 4,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true,
+        margin: 20,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 668,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
+};
+
 export default function Home() {
 
   return (
     <>
       <Navbar />
-      <main className="float-start w-100">
-        {/* hero section start */}
-        <section className="hero-section">
+      <main className="float-start w-100 maind-body">
+        <section className="hero-section float-start w-100 position-relative">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-lg-5 hero-left">
+              <div className="col-lg-5 hero-left">
                 <h1>Empowering <span> Nigerian Voices In</span> The Digital World</h1>
-                <p>A powerfull scalable CMS built for Nigeria”s storyteilere and content creetors</p>
-                <Link href="/" className="hero-btn">Get Started</Link>
-                <Link href="/">See Features</Link>
+                <p className="col-lg-9">A powerfull scalable CMS built for Nigeria”s storyteilere and content creetors</p>
+                <Link href="/" className="btn hero-btn">Get Started</Link>
+                <Link href="/" className="btn ms-3 see-featm">See Features</Link>
               </div>
-              <div className="col-12 col-lg-7 hero-right">
-                <figure>
+              <div className="col-lg-7 hero-right">
+                <figure className="text-end d-block">
                   <Image src="/laptop_img.webp" width={672} height={402} alt="logo" />
                 </figure>
 
               </div>
             </div>
           </div>
+          <figure className="m-0 bg-imh01">
+              <Image src="/background-png01.png" width={827} height={648} alt="bm"/>
+          </figure>
         </section>
-        {/* hero section send */}
-
-        {/* Features start */}
-        <section className="Features-section">
-          <h2 className="text-center ">Features</h2>
-          <div className="container">
-            {/*---- multiple Card ----*/}
+        <section className="Features-section feu-slider float-start w-100">
+          <h2 className="text-center crm-heading">Features</h2>
+          <div className="container  mt-5">
             <Slider {...settings}>
-              {/* card */}
               <div className="card">
                 <figure className="card-figure">
                   <Image src="/card-1.webp" width={255} height={197} alt="logo" />
@@ -206,7 +192,6 @@ export default function Home() {
                     <GoArrowUpRight /></Link>
                 </div>
               </div>
-              {/* card */}
               <div className="card">
                 <figure className="card-figure">
                   <Image src='/card-2.webp' width={255} height={197} alt="logo" className="cardimg" />
@@ -219,10 +204,9 @@ export default function Home() {
                     <GoArrowUpRight /></Link>
                 </div>
               </div>
-              {/* card */}
               <div className="card">
                 <figure className="card-figure">
-                  <Image src='/card-3.webp' width={255} height={197} alt="logo" />
+                  <Image src='/man-holding-cash_204719-55917.png' width={255} height={197} alt="logo" />
                 </figure>
 
                 <div className="card-body card-styleing">
@@ -250,21 +234,10 @@ export default function Home() {
 
         </section>
 
+        <section className="Features-section news-slider01 float-start w-100">
 
-        {/* ----------------------------------------------------------- */}
-
-
-
-
-
-
-        {/*---- single Card ----*/}
-        <section className="Features-section">
-
-          <div className="container">
-            {/*---- multiple Card ----*/}
+          <div className="container  mt-5">
             <Slider {...settingsTwo}>
-              {/* card */}
               <div className="card">
                 <article className="single-card-container">
                   <div className="single-card-btn-container">
@@ -301,7 +274,6 @@ export default function Home() {
 
                 </article>
               </div>
-              {/* card */}
               <div className="card">
                 <article className="single-card-container">
                   <div className="single-card-btn-container">
@@ -337,35 +309,18 @@ export default function Home() {
 
                 </article>
               </div>
-              {/* card */}
-
-
             </Slider>
-
-
-
-
           </div>
 
         </section>
 
-        {/* Features end */}
-
-
-
-
-
-        {/* Pricing Snippet start */}
-
-        <section className="snippet-section">
-          <h2 className="text-center common-headind">Pricing Snippet</h2>
+        <section className="snippet-section float-start w-100">
+          <h2 className="text-center crm-heading">Pricing Snippet</h2>
           <div className="container">
-            <div className="row">
-              {/* column price card */}
-              <div className="col-12 col-lg-4">
-                {/* card */}
-                <div className="card snippet-bost" >
-                  <div className="card-body">
+            <div className="row row-cols-1 pricing01 row-cols-lg-3 gx-lg-0  mb-5">
+              <div className="col">
+                <div className="card w-100 snippet-bost" >
+                  <div className="card-body w-100 p-0">
                     <div className="snippet-card">
                       <p className="plan-name">Freemium</p>
                       <p className="price">$0 <span>/mo</span></p>
@@ -393,11 +348,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* column price card */}
-              <div className="col-12 col-lg-4">
-                {/* card */}
-                <div className="card snippet-bost" >
-                  <div className="card-body">
+              <div className="col">
+                <div className="card w-100 snippet-bost" >
+                  <div className="card-body w-100 p-0">
                     <div className="snippet-card">
                       <p className="plan-name">Premium</p>
                       <p className="price">$55<span>/mo</span></p>
@@ -437,11 +390,9 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* column price card */}
-              <div className="col-12 col-lg-4">
-                {/* card */}
-                <div className="card snippet-bost" >
-                  <div className="card-body">
+              <div className="col">
+                <div className="card w-100 snippet-bost" >
+                  <div className="card-body w-100 p-0">
                     <div className="snippet-card">
                       <p className="plan-name">Enterprise</p>
                       <p className="price">$105 <span>/mo</span></p>
@@ -483,11 +434,7 @@ export default function Home() {
 
           <Footer></Footer>
         </section>
-        {/* Pricing Snippet end */}
       </main >
-
-
-
 
     </>
   );
