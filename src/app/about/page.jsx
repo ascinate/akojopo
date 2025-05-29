@@ -10,7 +10,6 @@ import Link from "next/link";
 // about page image
 import aboutBackground from '../assets/about-page-banner.webp';
 import aboutusImg from '../assets/about_img.webp';
-import missionCardOne from '../assets/aboutCardImgOneHover.webp'
 import missionCardTwo from '../assets/aboutCardImgOneHover.webp'
 import missionCardThree from '../assets/aboutCardImgOneHover.webp'
 import foundingImg from '../assets/foundingImg.webp';
@@ -94,64 +93,56 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <section className="about-section">
-        <div className="about-banner-section container-margin">
-          <div className="about-heading">
+      <section className="about-section float-start w-100">
+        <div className="about-banner-section  position-relative float-start w-100">
+         
             <h2>About Us</h2>
-          </div>
-          <div>
             <figure>
               <Image src={aboutBackground} width={1440} height={300} alt="logo" />
             </figure>
-          </div>
         </div>
 
-
-        {/* ----about us section start---- */}
-        <article className="container container-margin">
-          <div className="aboutus-article">
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <div className='aboutus-right'>
-                  <Image src={aboutusImg} width={555} height={447} alt="logo" />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className='aboutus-right '>
-                  <h2 className="aboutus-title">About<span className="imspan"> Us</span></h2>
-                  <p cl>We are a technology-driven platform built to empower Nigeriaus&#39;s growing community of content creators, journalists, and digital storytellers. Since our founding in 2020, we&#39;ve been committed to developing a locally relevant Content Management System (CMS) that addresses the real needs of the Nigerian media space—reliable publishing tools, multilingual support, easy monetization, and secure digital infrastructure.
-                    Our CMS is not just a tool—it&#39;s a bridge between technology and storytelling, designed to amplify authentic Nigerian voices.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-        {/* ----about us section start---- */}
+      
       </section>
 
 
+        <section className="about-start0150 float-start bg-white w-100">
+          
+            <div className="container">
+              <div className="row row-cols-1 row-cols-lg-2 gx-lg-5 align-items-center">
+                <div className="col">
+                  <div className='aboutus-right'>
+                    <Image src="/about_img.webp" width={555} height={447} alt="logo" />
+                  </div>
+                </div>
+                <div className="col">
+                  <div className='aboutus-right '>
+                    <h2 className="aboutus-title">About<span className="imspan"> Us</span></h2>
+                    <p cl>We are a technology-driven platform built to empower Nigeriaus&#39;s growing community of content creators, journalists, and digital storytellers. Since our founding in 2020, we&#39;ve been committed to developing a locally relevant Content Management System (CMS) that addresses the real needs of the Nigerian media space—reliable publishing tools, multilingual support, easy monetization, and secure digital infrastructure.
+                      Our CMS is not just a tool—it&#39;s a bridge between technology and storytelling, designed to amplify authentic Nigerian voices.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+      
 
-      {/* --- Our Mission start--- */}
-      <section className="container-margin">
+
+      <section className="missions-sections misouns0150 float-start w-100">
         <article className="mission-start-article aboutus-article">
-          <div className="mission-head ">
-            <h2 className='text-center ourMission-Heading'>Our Mission</h2>
-            <p className='text-center mission-head-para mx-auto d-block mt-3'>Our mission is to empower Nigerian content creators, journalists, and organizations with a powerful, locally-adapted CMS that simplifies and drives digital growth.</p>
-          </div>
-
-
-
-          <div className="container">
+          
+            <h2 className='text-center crm-heading'>Our Mission</h2>
+            <p className='text-center col-lg-7 mx-auto mt-3'>Our mission is to empower Nigerian content creators, journalists, and organizations with a powerful, locally-adapted CMS that simplifies and drives digital growth.</p>
+        
+          <div className="container mt-5">
             <div className="row">
-              {/* card column */}
               <div className="col-lg-4">
                 <div className="text-center">
 
-                  {/* card */}
                   <div className="card mission-card-style">
                     <div className="mx-auto">
                       <div className="about-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                        <Image src={missionCardOne} width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
+                        <Image src="/aboutCardImgSec.webp" width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
                       </div>
                     </div>
 
@@ -168,8 +159,6 @@ export default function About() {
                 </div>
               </div>
 
-
-              {/* card column */}
               <div className="col-lg-4">
                 <div className="text-center">
 
@@ -177,7 +166,7 @@ export default function About() {
                   <div className="card mission-card-style">
                     <div className="mx-auto">
                       <div className="about-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                        <Image src={missionCardOne} width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
+                        <Image src="/aboutCardImgThrHover.webp" width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
                       </div>
                     </div>
 
@@ -203,7 +192,7 @@ export default function About() {
                   <div className="card mission-card-style">
                     <div className="mx-auto">
                       <div className="about-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                        <Image src={missionCardOne} width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
+                        <Image src="/leadership-1.png" width={30} height={30} alt="mission card one image" className="about-card-icon-margin" />
                       </div>
                     </div>
 
@@ -221,17 +210,31 @@ export default function About() {
           </div>
         </article>
       </section>
-      {/* --- Our Mission end--- */}
-
-
-      {/*--- Our Founding Story start ----*/}
 
       <section className="container-margin">
         <article className="our-founding-article aboutus-article">
           <div className="container">
             <div className="row">
               <Slider {...settings}>
-                {/* slide  */}
+                <div className="d-flex gap-5">
+                  <div className="col-lg-6">
+                    <Image src={foundingImg} width={555} height={586} alt="logo" />
+                  </div>
+                  <div className="col-lg-6">
+                    <div>
+                      <h2 className="crm-heading mb-5">Our Founding <br /> <span class="story01">Story</span></h2>
+                    </div>
+                    <div className="ourfounding-year-para">
+                      <h4 className="ourfounding-year">2019</h4>
+                      <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
+                    </div>
+                    <div>
+                      <h4 className="ourfounding-year">2020</h4>
+                      <p className="">Founded in 2020, our journey began with a simple but powerful goal: to create a content platform that truly understands the needs of Nigerian storytellers. Frustrated by the limitations of foreign CMS tools, our team set out to build a solution tailored to the local market.</p>
+                    </div>
+                  </div>
+                </div>
+
                 <div className="d-flex gap-5">
                   <div className="col-lg-6">
                     <Image src={foundingImg} width={555} height={586} alt="logo" />
@@ -251,27 +254,6 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* slide  */}
-                <div className="d-flex gap-5">
-                  <div className="col-lg-6">
-                    <Image src={foundingImg} width={555} height={586} alt="logo" />
-                  </div>
-                  <div className="col-lg-6">
-                    <div>
-                      <h2 className="ourfounding-title">Our Founding <br /> <span>Story</span></h2>
-                    </div>
-                    <div className="ourfounding-year-para">
-                      <h4 className="ourfounding-year">2019</h4>
-                      <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
-                    </div>
-                    <div>
-                      <h4 className="ourfounding-year">2020</h4>
-                      <p className="">Founded in 2020, our journey began with a simple but powerful goal: to create a content platform that truly understands the needs of Nigerian storytellers. Frustrated by the limitations of foreign CMS tools, our team set out to build a solution tailored to the local market.</p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* slide  */}
                 <div className="d-flex gap-5">
                   <div className="col-lg-6">
                     <Image src={foundingImg} width={555} height={586} alt="logo" l oading="lazy" />
@@ -296,22 +278,17 @@ export default function About() {
         </article>
       </section>
 
-      {/* ---- Our Founding Story end ----*/}
 
-
-
-
-      {/* --- Why Choose Akojopo ? start ----*/}
 
       <section className="container-margin">
 
 
-        <article className="why-akojopo-article aboutus-article">
+        <article className="why-akojopo-article aboutus-article pt-0">
           <div className="container">
-            <h2 className="why-akojopo-heading">Why Choose <br />Akojopo ?</h2>
-            <div className="row align-items-center">
+            <h2 className="crm-heading">Why Choose <br />Akojopo ?</h2>
+            <div className="row align-items-start mt-5 gx-lg-5">
               <div className="col-lg-6">
-                <div className="row akojopo-number-margin">
+                <div className="row ">
                   <div className="col-lg-6 d-flex align-items-start">
                     <div className="akojopo-number">
                       <span className="akojopo-number-text">01</span>

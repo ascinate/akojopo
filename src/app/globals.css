@@ -305,24 +305,35 @@ body{
 
 .about-banner-section {
   text-align: center;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-
-.about-banner-section {
-  position: relative;
-}
-
-.about-heading {
+.about-banner-section figure{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  left: 0;
+  right: 0;
+  width: 100%;
+  top:0;
+  height: 100%;
+}
+.about-banner-section figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.about-heading>h2 {
+
+
+.about-banner-section  h2 {
   font-size: 50px;
   font-weight: 800;
   letter-spacing: 5px;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 
@@ -362,9 +373,24 @@ body{
   background-color: var(--secondary-theme-color);
   width: 56px;
   height: 56px;
-  margin-bottom: 37px;
+  margin-bottom: 15px;
 }
-
+.ourfounding-year{
+ position: relative;
+}
+.ourfounding-year::before{
+  position: absolute;
+  content:"";
+  left: 0;
+  height: 2px;
+  width: 100px;
+  background: #000;
+  display: inline-block;
+  bottom: 0;
+}
+.story01{
+  color: var(--secondary-theme-color);
+}
 .mission-card-title {
 
   font-weight: 600;
@@ -453,13 +479,15 @@ body{
   color: var(--secondary-theme-color);
   font-weight: 800;
   font-size: 35px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .akojopo-number-title {
 
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .akojopo-number-para {
@@ -848,7 +876,7 @@ font-size: 16px;
 
 /* :::::::::::::::Features page start :::::::::::::::::::::*/
 .row-margin{
-  margin-bottom: 110px;
+  margin-bottom: 180px;
 }
 .features-container>h2{
   margin-bottom: 64px;
@@ -1043,7 +1071,7 @@ font-size: 40px;
    color: var(--colortext);
    font-size: 16px;
    padding: 10px 20px;
-    border-bottom: solid 2px var(--background);
+    border-bottom: solid 2px transparent;
     position: relative;
 }
 .navbar-light .navbar-nav .nav-link::after,
@@ -1052,7 +1080,7 @@ font-size: 40px;
   content: "";
   width: 70%;
   height: 2px;
-  background: var(--background);
+  background: transparent;
   left: 0;
   right: 0;
   margin: auto;
@@ -1212,4 +1240,29 @@ header{
 .feu-slider .card-text{
    font-size: 14px;
   font-weight: 400;
+}
+
+.misouns0150{
+  padding: 30px 0 150px 0;
+  background: #F0F3FD;
+}
+
+.about-start0150{
+  background: #fff;
+  padding: 90px 0;
+}
+
+.fetures-div01-pages{
+  padding: 60px 0;
+}
+.fetures-div01-pages .features-stamp > h3{
+  font-weight: 700;
+  font-size: 30px;
+}
+.fetures-div01-pages .features-stamp{
+  height: auto;
+  min-height: 250px;
+}
+.fetures-div01-pages .features-row-one-card > button{
+  padding: 10px 30px;
 }

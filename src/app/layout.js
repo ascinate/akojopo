@@ -5,7 +5,7 @@ import ImportBs from "./components/ImportBs";
 
 const inter = Inter({
   variable: "--font-inter-sans",
-  weight: ['800','300','400', '600'],
+  weight: ['800','300','400', '600', '700'],
   subsets: ['latin'],
 });
 
