@@ -29,17 +29,17 @@ var settingsTwo = {
   margin: 20,
   autoplay: true,
   speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  initialSlide: 4,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  initialSlide: 1,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
     {
       breakpoint: 1200,
       settingsTwo: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         infinite: true,
         dots: true,
         margin: 20,
