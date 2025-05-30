@@ -42,7 +42,7 @@ function page() {
                                             <div className='login-btn-div login-input-margin'>
                                                 <button type='submit' className='login-btn'>Create Account</button>
                                             </div>
-                                            <p className='text-center'> <span className='haveaccount'>Don&#39;t have an account ?</span> <Link href='/' className='signup'>Sign Up</Link></p>
+                                            <p className='text-center'> <span className='haveaccount'>Do you have an account ?</span> <Link href='/login' className='signup'>Login</Link></p>
                                         </form>
 
                                     </div>

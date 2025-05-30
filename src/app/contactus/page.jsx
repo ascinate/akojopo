@@ -15,7 +15,7 @@ function page() {
              <section className="about-section float-start w-100">
                     <div className="about-banner-section  position-relative float-start w-100">
                     
-                        <h2>Contact Us</h2>
+                        <h2 className=''>Contact Us</h2>
                         <figure>
                         <Image src="/prol01.png" width={1440} height={300} alt="logo" />
                         </figure>
@@ -38,7 +38,7 @@ function page() {
                                 </div>
                                 <div className="col-lg-6">
                                     <form action="" method="" className='contact-right-form'>
-                                        <h2>Contact <span>Us</span></h2>
+                                        <h2 className='crm-heading'>Contact <span>Us</span></h2>
                                         <p>Have questions or need support? We&#39;re here to help! Use our Contact Us page to reach out to our team for technical assistance, partnership inquiries, or general information about our CMS. Whether you're a creator, journalist, or organization, we’re ready to support your journey in Nigeria’s digital media space.</p>
                                         <input type="text" className='contact-input' id='contact-fullname' placeholder='Enter Your Full Name:' />
                                         <div className='contact-eamil-phone'>

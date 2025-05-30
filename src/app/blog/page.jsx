@@ -39,8 +39,8 @@ function page() {
                         <div className="container">
                             <h2 className='latest-story-heading'>Our Latest <span className=''>Story</span></h2>
                         
-                            <div className='row latest-story-row'>
-                                <div className='col-lg-4'>
+                            <div className='row row-cols-1 row-cols-lg-3 gy-lg-4'>
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog1} width={360} height={236} alt="logo" />
@@ -52,7 +52,7 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog2} width={360} height={236} alt="logo" />
@@ -64,7 +64,7 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog3} width={360} height={236} alt="logo" />
@@ -76,9 +76,8 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='row latest-story-row'>
-                                <div className='col-lg-4'>
+
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog4} width={360} height={236} alt="logo" />
@@ -90,7 +89,7 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog5} width={360} height={236} alt="logo" />
@@ -102,7 +101,7 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='col-lg-4'>
+                                <div className='col'>
                                     <div className="card lateststory-card" >
                                         <figure>
                                             <Image src={blog6} width={360} height={236} alt="logo" />
@@ -114,6 +113,7 @@ function page() {
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </article>

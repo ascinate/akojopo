@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 
 
@@ -16,6 +17,7 @@ import footerlogo from '../assets/footerlogo.webp';
 
 function Footer() {
     return (
+        <>
         <footer className='foorte float-start w-100'>
             <div className='footer-back'>
                 <div className="container">
@@ -84,6 +86,9 @@ function Footer() {
             </div>
 
         </footer>
+
+        <MobileMenu/>
+        </>
     )
 }
 

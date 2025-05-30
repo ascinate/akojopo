@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { FaBars } from "react-icons/fa6";
 
 function HomeNavbar() {
     const mianmenu = [
@@ -28,8 +29,8 @@ function HomeNavbar() {
                     <Link className="navbar-brand" href="/">
                         <Image src='/logo1.svg' width={55} height={65} alt="logo" />
                     </Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler" data-bs-toggle="offcanvas" href="#mobile-menu" role="button" type="button">
+                       <FaBars />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-lg-0">

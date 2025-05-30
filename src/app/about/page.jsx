@@ -135,7 +135,7 @@ export default function About() {
             <p className='text-center col-lg-7 mx-auto mt-3'>Our mission is to empower Nigerian content creators, journalists, and organizations with a powerful, locally-adapted CMS that simplifies and drives digital growth.</p>
         
           <div className="container mt-5">
-            <div className="row">
+            <div className="row gy-4">
               <div className="col-lg-4">
                 <div className="text-center">
 
@@ -216,49 +216,51 @@ export default function About() {
           <div className="container">
             <div className="row">
               <Slider {...settings}>
-                <div className="d-flex gap-5">
-                  <div className="col-lg-6">
+                <div className="d-lg-flex align-items-start">
+                  <div className="col">
                     <Image src={foundingImg} width={555} height={586} alt="logo" />
                   </div>
-                  <div className="col-lg-6">
-                    <div>
+                  <div className="col ps-lg-5">
+                    <div className="como-lft01 d-inline-block w-100">
                       <h2 className="crm-heading mb-5">Our Founding <br /> <span class="story01">Story</span></h2>
-                    </div>
-                    <div className="ourfounding-year-para">
-                      <h4 className="ourfounding-year">2019</h4>
-                      <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
-                    </div>
-                    <div>
-                      <h4 className="ourfounding-year">2020</h4>
-                      <p className="">Founded in 2020, our journey began with a simple but powerful goal: to create a content platform that truly understands the needs of Nigerian storytellers. Frustrated by the limitations of foreign CMS tools, our team set out to build a solution tailored to the local market.</p>
+                      
+                      <div className="ourfounding-year-para">
+                        <h4 className="ourfounding-year">2019</h4>
+                        <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
+                      </div>
+                      
+                        <h4 className="ourfounding-year">2020</h4>
+                        <p className="">Founded in 2020, our journey began with a simple but powerful goal: to create a content platform that truly understands the needs of Nigerian storytellers. Frustrated by the limitations of foreign CMS tools, our team set out to build a solution tailored to the local market.</p>
+                      
                     </div>
                   </div>
                 </div>
 
-                <div className="d-flex gap-5">
-                  <div className="col-lg-6">
+                <div className="d-lg-flex align-items-start">
+                  <div className="col">
                     <Image src={foundingImg} width={555} height={586} alt="logo" />
                   </div>
-                  <div className="col-lg-6">
-                    <div>
+                  <div className="col ps-lg-5">
+                    <div className="como-lft01 d-inline-block w-100">
                       <h2 className="ourfounding-title">Our Founding <br /> <span>Story</span></h2>
-                    </div>
-                    <div className="ourfounding-year-para">
-                      <h4 className="ourfounding-year">2019</h4>
-                      <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
-                    </div>
-                    <div>
+                    
+                      <div className="ourfounding-year-para">
+                        <h4 className="ourfounding-year">2019</h4>
+                        <p>Our journey began in 2019 with a simple idea: to create a content platform that truly understands the needs of Nigerian creators. Frustrated by the limitations of foreign CMS tools, our founders—digital storytellers and tech enthusiasts—set out to build a solution tailored for Nigeria&#44;s diverse media landscape. From humble beginnings, we&#44;ve grown into a trusted platform that supports local languages, regional storytelling, and digital innovation across the country.</p>
+                      </div>
+                   
                       <h4 className="ourfounding-year">2020</h4>
                       <p className="">Founded in 2020, our journey began with a simple but powerful goal: to create a content platform that truly understands the needs of Nigerian storytellers. Frustrated by the limitations of foreign CMS tools, our team set out to build a solution tailored to the local market.</p>
                     </div>
+
                   </div>
                 </div>
 
-                <div className="d-flex gap-5">
-                  <div className="col-lg-6">
+                <div className="d-lg-flex align-items-start">
+                  <div className="col">
                     <Image src={foundingImg} width={555} height={586} alt="logo" l oading="lazy" />
                   </div>
-                  <div className="col-lg-6">
+                  <div className="col ps-lg-5">
                     <div>
                       <h2 className="ourfounding-title">Our Founding <br /> <span>Story</span></h2>
                     </div>
