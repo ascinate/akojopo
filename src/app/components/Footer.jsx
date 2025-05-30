@@ -22,7 +22,7 @@ function Footer() {
             <div className='footer-back'>
                 <div className="container">
                     <div className="foter-content">
-                        <div className="row row-cols-1 row-cols-lg-4 gx-lg-5">
+                        <div className="row row-cols-1 row-cols-lg-4 gx-lg-5 gy-lg-0 gy-4">
                             <div className='col'>
                                 <Link href="/"> <Image src={footerlogo} width={58} height={69} alt="logo" /> </Link>
                                 <p className='mt-3'> The Nigerian digital media space is rapidly evolving, and there&#39;s a growing need for tools that truly understand the local context. </p>
