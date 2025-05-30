@@ -329,8 +329,7 @@ body{
 
 .about-banner-section  h2 {
   font-size: 50px;
-  font-weight: 800;
-  letter-spacing: 5px;
+  font-weight: 700;
   color: white;
   position: relative;
   z-index: 2;
@@ -531,8 +530,7 @@ body{
 
 .login-card-title {
   font-weight: 600;
-  font-size: 35px;
-  margin-bottom: 32px;
+  font-size: 30px;
 }
 
 .login-form-input {
@@ -542,7 +540,7 @@ body{
 }
 
 .login-input-margin {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .login-btn {
@@ -551,6 +549,12 @@ body{
   width: 100%;
   border: none;
   background-color: #013637;
+  color: white;
+  transition: all 0.5s;
+}
+.login-btn:hover {
+  border: none;
+  background-color: var(--secondary-theme-color);
   color: white;
 }
 
@@ -675,17 +679,6 @@ border: none;
     color: var(--bs-secondary-color);
 }
 
-.contribute-card {
-    position: absolute;
-    top: 105px;
-    left: 595px;
-    width: 488px;
-
-    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
-    padding: 39px 20px 31px 31px;
-    background-color: #fff;
-    border-radius: 6px;
-}
 
 .contribute-card>h3 {
     font-weight: 600;
@@ -719,18 +712,17 @@ border: none;
 
 .contribute-content {
   position: relative;
-  background-color: #d42727;
   display: flex;
 
 }
 
-.contribute-img-col1 {
+/* .contribute-img-col1 {
   position: absolute;
 
   top: 125px;
   left: 105px;
   bottom: 0;
-}
+} */
 
 .contribute-img-col2-div {
   width: 292px;
@@ -769,15 +761,15 @@ border: none;
 }
 
 .contribute-card {
-  position: absolute;
-  top: 198px;
-  left: 595px;
-  width: 488px;
-z-index: 4;
+  position:relative;
+  left: -30px;
+  width: 90%;
+  z-index: 2;
   box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.1);
   padding: 39px 20px 31px 31px;
   background-color: #fff;
   border-radius: 6px;
+  top:0;
 }
 
 .contribute-card>h3 {
@@ -794,10 +786,12 @@ z-index: 4;
 
 .contribute-card>button {
   border: none;
-  padding-inline: 20px;
-  padding-block: 15px;
+  padding: 10px 30px;
   color: #fff;
   background-color: var(--theme-color);
+}
+.colort01{
+  color: var(--secondary-theme-color) !important;
 }
 
 /* Want to contribute end */
@@ -959,7 +953,7 @@ font-size: 40px;
 }
 .pricing-content {
     position: relative;
-    margin: 49px auto;
+    margin: 49px 0 10px 0;
     max-width: 1140px;
     /* background-color: #d42727; */
 }
@@ -983,26 +977,30 @@ font-size: 40px;
      font-weight: 600;
     font-size: 40px;
 } */
-
+.main-body{
+  padding-top: 50px;
+}
 .badge {
     background-color: #FFEBDF;
     padding: 6px 13px;
     border-radius: 50px;
     font-weight: 500;
     font-size: 13px;
+    color: var(--colortext);
 }
 .pricing-list-price {
     font-weight: 600;
     font-size: 70px;
 }
 
-.pricing-list-price-small{
-  font-size: 28px;
+.pricing-list-price-small {
+    font-size: 26px;
+    position: relative;
+    left: -17px;
 }
 .pricing-list-btn {
-  border: none;
-    padding-inline: 35px;
-    padding-block: 17px;
+    border: none;
+    padding: 10px 30px;
     border-radius: 5px;
     background-color: var(--secondary-theme-color);
     color: #fff;
@@ -1141,7 +1139,7 @@ font-size: 40px;
 }
 .crm-heading{
   color: var(--colortext);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 40px;
 }
 .special-pading{
@@ -1265,4 +1263,47 @@ header{
 }
 .fetures-div01-pages .features-row-one-card > button{
   padding: 10px 30px;
+}
+.pricing-pages .pricing-list-left > li, 
+.pricing-pages .pricing-list-right > li{
+      margin-bottom: 14px;
+}
+.table-pricings01 > div:nth-child(2) .pricing-row{
+   background: var(--secondary-theme-color);
+   border-color: var(--secondary-theme-color);
+}
+.table-pricings01 > div:nth-child(2) .pricing-list-title-head,
+.table-pricings01 > div:nth-child(2) .pricing-list-price{
+   color: var(--background);
+}
+.table-pricings01 > div:nth-child(2) .pricing-list-li{
+  color: var(--background);
+}
+.table-pricings01 > div:nth-child(2) .pricing-list-li img{
+  filter: brightness(0) invert(1);
+}
+.table-pricings01 > div:nth-child(2) .pricing-list-btn{
+  background: var(--background);
+  color: var(--colortext) !important;
+  padding: 10px 30px;
+}
+.table-pricings01 > div:nth-child(2) .badge{
+  color: var(--colortext);
+}
+
+.login-pages01 .login-section{
+  padding: 100px 0;
+}
+.login-pages01 .card-body{
+  padding: 40px;
+}
+
+.signup-textpaf figure{
+  height: 530px;
+  overflow: hidden;
+}
+.signup-textpaf figure img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

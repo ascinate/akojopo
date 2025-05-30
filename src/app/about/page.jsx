@@ -117,7 +117,7 @@ export default function About() {
                 </div>
                 <div className="col">
                   <div className='aboutus-right '>
-                    <h2 className="aboutus-title">About<span className="imspan"> Us</span></h2>
+                    <h2 className="crm-heading">About<span className="imspan"> Us</span></h2>
                     <p cl>We are a technology-driven platform built to empower Nigeriaus&#39;s growing community of content creators, journalists, and digital storytellers. Since our founding in 2020, we&#39;ve been committed to developing a locally relevant Content Management System (CMS) that addresses the real needs of the Nigerian media space—reliable publishing tools, multilingual support, easy monetization, and secure digital infrastructure.
                       Our CMS is not just a tool—it&#39;s a bridge between technology and storytelling, designed to amplify authentic Nigerian voices.</p>
                   </div>

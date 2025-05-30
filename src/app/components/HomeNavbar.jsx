@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-function Navbar() {
+function HomeNavbar() {
     const mianmenu = [
         { id: 1, title: 'Home', href: '/' },
         { id: 2, title: 'About', href: '/about' },
@@ -23,7 +23,7 @@ function Navbar() {
         
         <>
         <header className="float-start w-100">
-            <nav className="navbar navbar-expand-lg bg-white navbar-light">
+            <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container align-items-center">
                     <Link className="navbar-brand" href="/">
                         <Image src='/logo1.svg' width={55} height={65} alt="logo" />
@@ -75,4 +75,4 @@ function Navbar() {
     );
 
 }
-export default Navbar;
+export default HomeNavbar;

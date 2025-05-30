@@ -9,36 +9,38 @@ import Link from 'next/link';
 function page() {
     return (
         <>
-            <Navbar></Navbar>
-            <section className="login-section">
-                <article className="">
-                    <div className="container">
-                        <div className="card mb-3 login-card">
-                            <div className="row g-0">
-                                <div className="col-md-4">
-                                    <figure>
+            <Navbar/>
+
+             <main className='float-start w-100 signup-textpaf login-pages01'>
+                <section className="login-section">
+                    
+                        <div className="container">
+                           
+                            <div className="row row-cols-1 col-lg-9 mx-auto bg-white row-cols-lg-2 g-0">
+                                <div className="col">
+                                    <figure className='m-0'>
                                         <Image src={loginImg} width={394} height={475} alt="logo" />
                                     </figure>
                                 </div>
-                                <div className="col-md-8">
+                                <div className="col">
                                     <div className="card-body">
                                         <h5 className="card-title login-card-title">Create account</h5>
-                                        <form className='card-form'>
+                                        <form className='card-form mt-3'>
                                             <div className='login-input-margin'>
-                                                <label htmlFor="#">Phone</label>
+                                                <label className='mb-2' htmlFor="#">Phone</label>
                                                 <input type="text" className="form-control login-form-input " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
 
                                             <div className='login-input-margin '>
-                                                <label htmlFor="#">E-mail</label>
+                                                <label className='mb-2' htmlFor="#">E-mail</label>
                                                 <input type="text" className="form-control login-form-input  " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
                                             <div className='login-input-margin '>
-                                                <label htmlFor="#">Password</label>
+                                                <label className='mb-2' htmlFor="#">Password</label>
                                                 <input type="password" className="form-control login-form-input  " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
                                             <div className='login-btn-div login-input-margin'>
-                                                <button className='login-btn'>Create Account</button>
+                                                <button type='submit' className='login-btn'>Create Account</button>
                                             </div>
                                             <p className='text-center'> <span className='haveaccount'>Don&#39;t have an account ?</span> <Link href='/' className='signup'>Sign Up</Link></p>
                                         </form>
@@ -46,17 +48,12 @@ function page() {
                                     </div>
                                 </div>
                             </div>
+                           
                         </div>
-                    </div>
-                </article>
-            </section>
-
-
-
-
-
-
-            {/* <Footer></Footer> */}
+                   
+                </section>
+            </main>
+           
         </>
     )
 }

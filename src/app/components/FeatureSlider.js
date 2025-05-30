@@ -15,8 +15,8 @@ var settings = {
   autoplay: true,
   speed: 500,
   slidesToShow: 4,
-  slidesToScroll: 4,
-  initialSlide: 4,
+  slidesToScroll: 1,
+  initialSlide: 3,
   autoplaySpeed: 2000,
   pauseOnHover: true,
   responsive: [
@@ -104,7 +104,7 @@ function FeatureSlider() {
               </div>
               <div className="card">
                 <figure className="card-figure">
-                  <Image src='/card-3.webp' width={255} height={197} alt="logo" />
+                  <Image src='/man-holding-cash_204719-55917.png' width={255} height={197} alt="logo" />
                 </figure>
 
                 <div className="card-body card-styleing">

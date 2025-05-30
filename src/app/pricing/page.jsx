@@ -11,21 +11,26 @@ import Footer from '../components/Footer'
 function page() {
     return (
         <>
-            <header>
-                <Navbar />
-            </header>
+            <Navbar />
+            <section className="about-section float-start w-100">
 
-            <BannerImage/>
-            <main>
-                <section className="container-margin">
-                    <div className=" aboutus-article pricing-containter">
-                        <h2>Pick a plan that&#39;s <br /> right <span>for you</span></h2>
-                        <div className="container">
-                            {/* row */}
+                <div className="about-banner-section  position-relative float-start w-100">
+                    
+                    <h2>Choose Your Plan</h2>
+                    <figure>
+                        <Image src="/mask-group.jpg" width={1440} height={300} alt="logo" />
+                    </figure>
+                </div>
+
+            </section>
+            <main className='float-start w-100 pricing-pages main-body'>
+                
+                    <section className=" aboutus-article pricing-containter">
+                        <h2 className='crm-heading'>Pick a plan that&#39;s <br/> right <span> for you</span></h2>
+                        <div className="container table-pricings01">
                             <div className='row'>
                                 <div className='col-lg-12'>
                                     <div className='pricing-content'>
-                                        {/* row */}
 
                                         <div className='pricing-row-main-badge' id='pricing-row-main-badge'>
                                             <p>Favorite</p>
@@ -57,11 +62,9 @@ function page() {
                             </div>
 
 
-                         {/* row */}
                             <div className='row'>
                                 <div className='col-lg-12'>
                                     <div className='pricing-content'>
-                                        {/* row */}
 
                                         <div className='pricing-row-main-badge' id='pricing-row-main-badge'>
                                             <p>Popular</p>
@@ -93,11 +96,9 @@ function page() {
                             </div>
 
 
-                            {/* row */}
                             <div className='row'>
                                 <div className='col-lg-12'>
                                     <div className='pricing-content'>
-                                        {/* row */}
 
                                         <div className='pricing-row-main-badge' id='pricing-row-main-badge'>
                                             <p>Popular</p>
@@ -129,14 +130,12 @@ function page() {
                             </div>   
                             
                         </div>
-                    </div>
-                </section>
+                    </section>
+                
             </main>
 
 
-            <footer>
-<Footer></Footer>
-            </footer>
+           <Footer/>
         </>
     )
 }

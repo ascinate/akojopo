@@ -16,78 +16,12 @@ import { FaArrowRight } from "react-icons/fa";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowRightCircleFill } from "react-icons/bs";
 import FeatureSlider from "./components/FeatureSlider";
-import HomeNavbar from "./components/HomeNavbar";
 
 //react slick
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "./components/Footer";
-
-
-
-var settings = {
-  dots: true,
-  infinite: true,
-  margin: 20,
-  autoplay: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  initialSlide: 3,
-  autoplaySpeed: 2000,
-  pauseOnHover: true,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        infinite: true,
-        dots: true,
-        margin: 20,
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 668,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    }
-  ]
-};
 
 var settingsTwo = {
   dots: true,
@@ -152,11 +86,74 @@ var settingsTwo = {
   ]
 };
 
+var settings = {
+  dots: true,
+  infinite: true,
+  margin: 20,
+  autoplay: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  initialSlide: 4,
+  autoplaySpeed: 2000,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        infinite: true,
+        dots: true,
+        margin: 20,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 668,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
+};
+
 export default function Home() {
 
   return (
     <>
-      <HomeNavbar />
+      <Navbar />
       <main className="float-start w-100 maind-body">
         <section className="hero-section float-start w-100 position-relative">
           <div className="container">
@@ -181,8 +178,58 @@ export default function Home() {
         </section>
         <section className="Features-section feu-slider float-start w-100">
           <h2 className="text-center crm-heading">Features</h2>
-          <div className="container mt-5">
-             <FeatureSlider/>
+          <div className="container  mt-5">
+            <Slider {...settings}>
+              <div className="card">
+                <figure className="card-figure">
+                  <Image src="/card-1.webp" width={255} height={197} alt="logo" />
+                </figure>
+
+                <div className="card-body card-styleing">
+                  <h5 className="card-title">Multtinqual Publishing</h5>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
+                  <Link href="#" className="btn card-btn">
+                    <GoArrowUpRight /></Link>
+                </div>
+              </div>
+              <div className="card">
+                <figure className="card-figure">
+                  <Image src='/card-2.webp' width={255} height={197} alt="logo" className="cardimg" />
+                </figure>
+
+                <div className="card-body card-styleing">
+                  <h5 className="card-title">Custom Content Editor</h5>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
+                  <Link href="#" className="btn card-btn">
+                    <GoArrowUpRight /></Link>
+                </div>
+              </div>
+              <div className="card">
+                <figure className="card-figure">
+                  <Image src='/man-holding-cash_204719-55917.png' width={255} height={197} alt="logo" />
+                </figure>
+
+                <div className="card-body card-styleing">
+                  <h5 className="card-title">Monetization Tool</h5>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
+                  <Link href="#" className="btn card-btn">
+                    <GoArrowUpRight /></Link>
+                </div>
+              </div>
+              {/* card */}
+              <div className="card">
+                <figure className="card-figure">
+                  <Image src='/card-4.webp' width={255} height={197} alt="logo" />
+                </figure>
+
+                <div className="card-body card-styleing">
+                  <h5 className="card-title">SEO & Analytics</h5>
+                  <p className="card-text">A prine&#39; review/c satillaction</p>
+                  <Link href="#" className="btn card-btn">
+                    <GoArrowUpRight /></Link>
+                </div>
+              </div>
+            </Slider>
           </div>
 
         </section>
@@ -190,7 +237,7 @@ export default function Home() {
         <section className="Features-section news-slider01 float-start w-100">
 
           <div className="container  mt-5">
-                <Slider {...settingsTwo}>
+            <Slider {...settingsTwo}>
               <div className="card">
                 <article className="single-card-container">
                   <div className="single-card-btn-container">
