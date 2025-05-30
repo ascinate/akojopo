@@ -27,7 +27,7 @@ function HomeNavbar() {
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container align-items-center">
                     <Link className="navbar-brand" href="/">
-                        <Image src='/logo1.svg' width={55} height={65} alt="logo" />
+                        <Image src='/logo1.svg' width={75} height={88} alt="logo" />
                     </Link>
                     <button className="navbar-toggler" data-bs-toggle="offcanvas" href="#mobile-menu" role="button" type="button">
                        <FaBars />
