@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background1: #ffffff;
   --foreground: #171717;
   --theme-color: #013637;
   --secondary-theme-color: #CF5E1B;
@@ -9,7 +9,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: var(--background1);
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -34,11 +34,7 @@ li {
   list-style: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}
+
 
 /* hero section end */
 .hero-left>h1 {
