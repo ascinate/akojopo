@@ -1304,9 +1304,7 @@ header{
 .features-container > h2{
   margin-bottom: 100px;
 }
-.login-pages01 figure{
-  display: none;
-}
+
 
 .mobile-menu-sec li a, .mobile-menu-sec li .dropdown .btn {
     text-decoration: none;
@@ -1456,5 +1454,8 @@ header{
   }
   .pricing-list-price{
     font-size: 45px;
+  }
+  .login-pages01 figure{
+  display: none;
   }
 }
