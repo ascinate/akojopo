@@ -6,12 +6,7 @@
   --colortext: #000000;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 09cb2715c89145506409b06ea5bc868a4678871a
 body {
-  color: var(--foreground);
   background: var(--background1);
   font-family: "Inter", sans-serif;
 }
