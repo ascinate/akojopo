@@ -18,7 +18,7 @@ function page() {
                             <div className="row row-cols-1 col-lg-9 mx-auto bg-white row-cols-lg-2 g-0">
                                 <div className="col">
                                     <figure className='m-0'>
-                                        <Image src={loginImg} width={394} height={475} alt="logo" />
+                                        <Image src='/loginImg.webp' width={394} height={475} alt="logo" />
                                     </figure>
                                 </div>
                                 <div className="col">
