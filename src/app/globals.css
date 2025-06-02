@@ -6,6 +6,10 @@
   --colortext: #000000;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 09cb2715c89145506409b06ea5bc868a4678871a
 body {
   color: var(--foreground);
   background: var(--background1);
@@ -1072,7 +1076,7 @@ font-size: 40px;
 }
 .right-menus01 li:last-child .nav-link{
    background: var(--theme-color);
-   color: var(--background);
+   color: #fff !important;
    border-radius: 8px;
    padding: 10px 30px;
 }
