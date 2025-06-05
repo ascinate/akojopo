@@ -15,7 +15,6 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { BsArrowRightCircleFill } from "react-icons/bs";
-import FeatureSlider from "./components/FeatureSlider";
 import HomeNavbar from "./components/HomeNavbar";
 
 //react slick
@@ -187,13 +186,7 @@ export default function Home() {
               <Image src="/background-png01.png" width={827} height={648} alt="bm"/>
           </figure>
         </section>
-        <section className="Features-section feu-slider float-start w-100">
-          <h2 className="text-center crm-heading">Features</h2>
-          <div className="container mt-5">
-             <FeatureSlider/>
-          </div>
-
-        </section>
+      
 
         <section className="Features-section news-slider01 comon-slider-homes float-start w-100">
 
