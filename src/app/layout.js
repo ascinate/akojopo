@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter , Montserrat } from "next/font/google";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
 import ImportBs from "./components/ImportBs";
@@ -8,6 +8,13 @@ const inter = Inter({
   weight: ['800','300','400', '600', '700'],
   subsets: ['latin'],
 });
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat-sans",
+  weight: ['800','300','400', '600', '700'],
+  subsets: ['latin'],
+});
+
 
 
 export const metadata = {
@@ -22,10 +29,10 @@ export default function RootLayout({ children }) {
       <body>
        <style>{`
           h1, h2, h3, h4, h5, button , a, input , p {
-            font-family: ${inter.style.fontFamily};
+            font-family: ${montserrat.style.fontFamily};
           }
           body {
-            font-family: ${inter.style.fontFamily};
+            font-family: ${montserrat.style.fontFamily};
           }
         `}
       </style>
