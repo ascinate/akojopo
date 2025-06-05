@@ -10,7 +10,7 @@ function Navbar() {
         { id: 2, title: 'About', href: '/about' },
         { id: 3, title: 'Features', href: '/features' },
         { id: 4, title: 'Membership', href: '/membership' },
-        { id: 5, title: 'Blog', href: '/blog' },
+        { id: 5, title: 'Trending', href: '/trending' },
     ];
 
     const mianright = [
