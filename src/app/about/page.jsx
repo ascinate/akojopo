@@ -54,7 +54,8 @@ var settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -64,7 +65,8 @@ var settings = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -74,7 +76,8 @@ var settings = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -83,7 +86,8 @@ var settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     }
   ]
@@ -211,8 +215,8 @@ export default function About() {
         </article>
       </section>
 
-      <section className="container-margin">
-        <article className="our-founding-article aboutus-article">
+      <section className="container-margin float-start w-100">
+        <article className="our-founding-article comon-slider-homes aboutus-article">
           <div className="container">
             <div className="row">
               <Slider {...settings}>
@@ -282,7 +286,7 @@ export default function About() {
 
 
 
-      <section className="container-margin mb-0 mb-lg-4">
+      <section className="container-margin mb-0 mb-lg-4 float-start w-100">
 
 
         <article className="why-akojopo-article aboutus-article pt-0 pb-3">

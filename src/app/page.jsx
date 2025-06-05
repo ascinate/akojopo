@@ -54,7 +54,8 @@ var settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -64,7 +65,8 @@ var settings = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -74,7 +76,8 @@ var settings = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -83,7 +86,8 @@ var settings = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     }
   ]
@@ -117,7 +121,8 @@ var settingsTwo = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -127,7 +132,8 @@ var settingsTwo = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -137,7 +143,8 @@ var settingsTwo = {
         slidesToScroll: 1,
         initialSlide: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     },
     {
@@ -146,7 +153,8 @@ var settingsTwo = {
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: true
+        dots: true,
+        margin: 0,
       }
     }
   ]
@@ -187,7 +195,7 @@ export default function Home() {
 
         </section>
 
-        <section className="Features-section news-slider01 float-start w-100">
+        <section className="Features-section news-slider01 comon-slider-homes float-start w-100">
 
           <div className="container  mt-5">
                 <Slider {...settingsTwo}>

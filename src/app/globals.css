@@ -1367,6 +1367,20 @@ header{
   .obile-margin{
     padding-bottom: 0;
   }
+  .comon-slider-homes img{
+    width: 100%;
+    height: 100%;
+  }
+  .our-founding-article.comon-slider-homes{
+    overflow: hidden;
+  }
+  .news-slider01 .container,
+  .single-card-container .container{
+     overflow: hidden;
+  }
+  .slick-next{
+    right: 0;
+  }
 }
 @media(max-width:769px){
 }
