@@ -282,10 +282,10 @@ export default function About() {
 
 
 
-      <section className="container-margin">
+      <section className="container-margin mb-0 mb-lg-4">
 
 
-        <article className="why-akojopo-article aboutus-article pt-0">
+        <article className="why-akojopo-article aboutus-article pt-0 pb-3">
           <div className="container">
             <h2 className="crm-heading">Why Choose <br />Akojopo ?</h2>
             <div className="row align-items-start mt-5 gx-lg-5">
