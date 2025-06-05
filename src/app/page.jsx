@@ -194,14 +194,7 @@ export default function Home() {
                              
               <div className="card">
                 <article className="single-card-container">
-                  <div className="single-card-btn-container">
-                    <div className="">
-                      <button className="single-card-btn-left single-card-btn-container-style"><BsArrowLeftCircle /></button>
-                    </div>
-                    <div className="">
-                      <button className="single-card-btn-right single-card-btn-container-style"><BsArrowRightCircleFill /></button>
-                    </div>
-                  </div>
+                 
                   <div className="single-card">
 
 
