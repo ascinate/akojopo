@@ -29,7 +29,7 @@ function Navbar() {
                     <Link className="navbar-brand" href="/">
                         <Image src='/logo1.svg' width={75} height={88} alt="logo" />
                     </Link>
-                    <button className="navbar-toggler" data-bs-toggle="offcanvas" href="#mobile-menu" role="button" type="button">
+                    <button className="navbar-toggler" data-bs-toggle="offcanvas" href="#mobile-menu"  type="button">
                         <FaBars />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

@@ -29,9 +29,9 @@ function HomeNavbar() {
                     <Link className="navbar-brand" href="/">
                         <Image src='/logo1.svg' width={75} height={88} alt="logo" />
                     </Link>
-                    <button className="navbar-toggler" data-bs-toggle="offcanvas" href="#mobile-menu" role="button" type="button">
+                    <Link className="navbar-toggler" data-bs-toggle="offcanvas" role="button" href="#mobile-menu">
                        <FaBars />
-                    </button>
+                    </Link>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mx-auto mb-lg-0">
                             {mianmenu.map((page) => {

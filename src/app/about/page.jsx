@@ -353,7 +353,7 @@ export default function About() {
 
 
 
-      <Footer></Footer>
+      <Footer/>
     </>
   );
 }
