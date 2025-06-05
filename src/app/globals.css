@@ -1283,8 +1283,8 @@ header{
 }
 
 .signup-textpaf figure{
-  height: 530px;
-  overflow: hidden;
+    height: 650px;
+    overflow: hidden;
 }
 .signup-textpaf figure img{
   object-fit: cover;
@@ -1323,6 +1323,38 @@ header{
 .mobile-menu-div .close-menu svg {
     width: 30px;
     height: 30px;
+}
+.with-text::before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:11px;
+    width: 100%;
+    height: 2px;
+    background: #e9e9e9;
+    content: "";
+}
+.with-text span{
+  position: relative;
+  z-index: 2;
+}
+.btn-gma{
+  border: solid 1px #e7e7e7;
+  padding: 11px 30px;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  transform: scale();
+  transition: all 0.5s;
+}
+.btn-gma svg{
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+.btn-gma:hover{
+  transform: scale(1.1);
 }
 @media(max-width:667px){
   .hero-left > h1{
