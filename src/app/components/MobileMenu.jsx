@@ -42,19 +42,7 @@ function MobileMenu() {
                             <li data-bs-dismiss="offcanvas">
                                 <Link href="/blog">Blog</Link>
                             </li>
-                            <li data-bs-dismiss="offcanvas">
-                                <Link href="/contact">Support</Link>
-                            </li>
-                            <li data-bs-dismiss="offcanvas">
-                                <Link href="/login">Login</Link>
-                            </li>
-                            <li data-bs-dismiss="offcanvas">
-                                <Link href="/signup">Signup</Link>
-                            </li>
-                            <li data-bs-dismiss="offcanvas">
-                                <Link href="/about" class="btn signup-btn"> Login / Register </Link>
-                            </li>
-
+                            
                             </ul>
                         </div>
                         
