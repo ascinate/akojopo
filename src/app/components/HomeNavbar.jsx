@@ -14,8 +14,8 @@ function HomeNavbar() {
     ];
 
     const mianright = [
-        { id: 6, title: 'Login', href: '/login' },
-        { id: 7, title: 'Signup', href: '/signup' },
+        { id: 7, title: 'Login', href: '/login' },
+        { id: 8, title: 'Signup', href: '/signup' },
     ];
     const pathname = usePathname();
     return (
