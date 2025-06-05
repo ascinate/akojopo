@@ -191,8 +191,7 @@ export default function Home() {
         <section className="Features-section news-slider01 comon-slider-homes float-start w-100 mt-5">
 
           <div className="container  mt-5">
-                <Slider {...settingsTwo}>
-              
+                             
               <div className="card">
                 <article className="single-card-container">
                   <div className="single-card-btn-container">
@@ -228,7 +227,7 @@ export default function Home() {
 
                 </article>
               </div>
-            </Slider>
+           
           </div>
 
         </section>
