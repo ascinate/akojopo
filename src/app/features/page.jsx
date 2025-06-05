@@ -28,7 +28,7 @@ function page() {
                 
                 </section>
             <main className='float-start w-100'>
-                <section className="fetures-div01-pages w-100 d-inline-block">
+                <section className="fetures-div01-pages pb-0 pb-lg-5 w-100 d-inline-block">
                     <div className=" aboutus-article features-container">
                         <h2>Our Features & <span>Services</span></h2>
                         <div className="container">

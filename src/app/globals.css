@@ -1356,6 +1356,20 @@ header{
 .btn-gma:hover{
   transform: scale(1.1);
 }
+
+
+
+@media(max-width:1181px){
+}
+@media(max-width:1025px){
+}
+@media(max-width:911px){
+  .obile-margin{
+    padding-bottom: 0;
+  }
+}
+@media(max-width:769px){
+}
 @media(max-width:667px){
   .hero-left > h1{
      font-size: 35px;
@@ -1490,4 +1504,9 @@ header{
   .login-pages01 figure{
   display: none;
   }
+  .obile-margin{
+    padding-bottom: 0;
+  }
+
+
 }
