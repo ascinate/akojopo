@@ -37,12 +37,12 @@ function MobileMenu() {
                                 <Link href="/features">Features</Link>
                             </li>
                             <li data-bs-dismiss="offcanvas">
-                                <Link href="/pricing">Pricing</Link>
+                                <Link href="/membership">Membership</Link>
                             </li>
                             <li data-bs-dismiss="offcanvas">
-                                <Link href="/blog">Blog</Link>
+                                <Link href="/trending">Trending</Link>
                             </li>
-                            
+
                             </ul>
                         </div>
                         
