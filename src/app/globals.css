@@ -57,11 +57,13 @@ li {
   padding-block: 15px;
   padding-inline: 26px;
   background-color: var(--theme-color);
-  color: #ffffff;
+  color: #fff !important;
   border-radius: 3px;
   margin-right: 4px;
 }
-
+.hero-section .hero-btn{
+  color: #fff !important;
+}
 /* 
 body{
   background-image: url("./assets/background.webp");
