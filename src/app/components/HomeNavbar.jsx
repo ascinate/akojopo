@@ -9,8 +9,8 @@ function HomeNavbar() {
         { id: 1, title: 'Home', href: '/' },
         { id: 2, title: 'About', href: '/about' },
         { id: 3, title: 'Features', href: '/features' },
-        { id: 4, title: 'Pricing', href: '/pricing' },
-        { id: 5, title: 'Blog', href: '/blog' },
+        { id: 4, title: 'Membership', href: '/membership' },
+        { id: 5, title: 'Trending', href: '/trending' },
     ];
 
     const mianright = [
