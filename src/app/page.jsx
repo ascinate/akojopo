@@ -192,42 +192,7 @@ export default function Home() {
 
           <div className="container  mt-5">
                 <Slider {...settingsTwo}>
-              <div className="card">
-                <article className="single-card-container">
-                  <div className="single-card-btn-container">
-                    <div className="">
-                      <button className="single-card-btn-left single-card-btn-container-style"><BsArrowLeftCircle /></button>
-                    </div>
-                    <div className="">
-                      <button className="single-card-btn-right single-card-btn-container-style"><BsArrowRightCircleFill /></button>
-                    </div>
-                  </div>
-                  <div className="single-card">
-
-
-                    <div className="quotation-top">
-                      <Image src="/quotation.webp" width={59} height={59} alt="quotation" />
-                    </div>
-                    <div className="quotation-bottom">
-                      <Image src="/quotation.webp" width={59} height={59} alt="logo" />
-                    </div>
-
-                    <div className="single-card-left">
-                      <div className="">
-                        <Image src='/testmonials1.png' width={210} height={210} alt="logo" />
-                      </div>
-
-                    </div>
-                    <div className="single-card-right">
-                      <p className="single-card-right-para">A content creator is someone who produces and shares original material across digital platforms like blogs, social media, YouTube, or podcasts. They use their creativity and skills to inform, entertain, or inspire audiences through various forms such as videos, articles, graphics, or audio. Content creators play a vital role in shaping online trends, building communities, and influencing opinions in today's digital world.</p>
-
-                      <p className="single-card-right-para-head">PulseCraft NG</p>
-                      <p className="single-card-right-para-content"> Content Creator</p>
-                    </div>
-                  </div>
-
-                </article>
-              </div>
+              
               <div className="card">
                 <article className="single-card-container">
                   <div className="single-card-btn-container">
