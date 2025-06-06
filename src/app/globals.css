@@ -1050,12 +1050,6 @@ font-size: 40px;
 
 /* navbar */
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .navbar-light .navbar-nav .nav-link,
 .right-menus01 .nav-link{
    font-weight: 500;
