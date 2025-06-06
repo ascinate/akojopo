@@ -11,14 +11,7 @@ function page() {
     return (
         <>
             <Navbar />
-            <section className="about-section float-start w-100">
-                <div className="about-banner-section position-relative float-start w-100">
-                    <h2>Choose Your Plan</h2>
-                    <figure>
-                        <Image src="/mask-group.jpg" width={1440} height={300} alt="logo" />
-                    </figure>
-                </div>
-            </section>
+           
 
             <main className="float-start w-100 pricing-pages main-body">
                 <section className="aboutus-article pricing-containter">
