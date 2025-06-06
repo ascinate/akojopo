@@ -947,11 +947,9 @@ font-size: 40px;
     display: flex;
     align-items: center;
     gap: 8px;
- 
-font-weight: 600;
-font-size: 40px;
-
-
+    font-weight: 600;
+    font-size: 40px;
+    margin-top: 30px;
 }
 /* .pricing-list-title-head {
     display: flex;
