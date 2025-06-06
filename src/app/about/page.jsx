@@ -268,7 +268,7 @@ export default function About() {
               </div>
               <div className="col-lg-6">
 
-                <div>
+                <div className="whyus">
                   <Image src={akojopoImg} width={555} height={418} alt="logo" />
                 </div>
               </div>
