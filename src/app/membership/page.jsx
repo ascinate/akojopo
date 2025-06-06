@@ -36,6 +36,7 @@ function page() {
                                     <div className="pricing-row">
                                         <ul className="pricing-list-left">
                                             <li className="pricing-list-title-head">
+                                                <p>&nbsp;</p>
                                                 <span>Freemium</span> <span className="badge">Free</span>
                                             </li>
                                             <li className="pricing-list-price">
