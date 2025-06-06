@@ -16,17 +16,7 @@ function page() {
     return (
         <>
             <Navbar />
-            <section className="about-section float-start w-100">
-                    <div className="about-banner-section  position-relative float-start w-100">
-                    
-                        <h2>Our Features</h2>
-                        <figure>
-                        <Image src="/prol01.png" width={1440} height={300} alt="logo" />
-                        </figure>
-                    </div>
-
-                
-                </section>
+          
             <main className='float-start w-100'>
                 <section className="fetures-div01-pages pb-0 pb-lg-5 w-100 d-inline-block">
                     <div className=" aboutus-article features-container">
