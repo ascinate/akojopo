@@ -97,17 +97,7 @@ export default function About() {
   return (
     <>
       <Navbar />
-      <section className="about-section float-start w-100">
-        /*<div className="about-banner-section  position-relative float-start w-100">
-         
-            <h2>About Us</h2>
-            <figure>
-              <Image src={aboutBackground} width={1440} height={300} alt="logo" />
-            </figure>
-        </div>*/
 
-      
-      </section>
 
 
         <section className="about-start0150 float-start bg-white w-100">
