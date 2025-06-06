@@ -1383,6 +1383,9 @@ header{
   .slick-next{
     right: 0;
   }
+  .whyus img{
+    display:none;
+  }
 }
 @media(max-width:769px){
 }
@@ -1523,6 +1526,8 @@ header{
   .obile-margin{
     padding-bottom: 0;
   }
-
+.whyus img{
+    display:none;
+  }
 
 }
