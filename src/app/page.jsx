@@ -186,8 +186,7 @@ export default function Home() {
               <Image src="/background-png01.png" width={827} height={648} alt="bm"/>
           </figure>
         </section>
-      
-                
+                     
       </main >
       <Footer/>
 
