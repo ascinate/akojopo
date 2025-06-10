@@ -1,12 +1,50 @@
-import React from 'react'
+'use client';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import loginImg from '../assets/loginImg.webp';
 import Image from "next/image";
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 function page() {
+     const [identifier, setIdentifier] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const router = useRouter();
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+
+        try {
+            const res = await fetch('http://localhost:1337/api/auth/local', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    identifier,
+                    password
+                })
+            });
+
+            const data = await res.json();
+
+            if (res.ok) {
+                // ✅ Save token to localStorage or cookie
+                localStorage.setItem('token', data.jwt);
+                localStorage.setItem('user', JSON.stringify(data.user));
+
+                // ✅ Redirect to dashboard or home
+                router.push('/');
+            } else {
+                setError(data.error?.message || 'Login failed');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        }
+    };
     return (
         <>
             <Navbar/>
@@ -24,15 +62,18 @@ function page() {
                                 <div className="col">
                                     <div className="card-body">
                                         <h5 className="card-title login-card-title">Sign in</h5>
-                                        <form className='card-form mt-3'>
+                                        <form className='card-form mt-3' onSubmit={handleLogin}>
+                                            {error && <div className="text-danger mb-2">{error}</div>}
                                             <div className='login-input-margin'>
                                                 <label className='mb-2' htmlFor="#">User Id / E-mail</label>
-                                                <input type="text" className="form-control login-form-input " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                <input type="text" className="form-control login-form-input " value={identifier}
+                                                onChange={(e) => setIdentifier(e.target.value)} placeholder="" />
                                             </div>
 
                                             <div className='login-input-margin '>
                                                 <label className='mb-2' htmlFor="#">Password</label>
-                                                <input type="password" className="form-control login-form-input  " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                <input type="password" className="form-control login-form-input" value={password}
+                                                onChange={(e) => setPassword(e.target.value)} placeholder=""/>
                                                 <Link href='/' className='forgetpassword login-input-margin mt-3'>Forget Password?</Link>
                                             </div>
                                             <div className='login-btn-div login-input-margin'>

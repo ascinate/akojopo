@@ -1,4 +1,5 @@
-import React from 'react'
+'use client';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -7,6 +8,50 @@ import Image from "next/image";
 import Link from 'next/link';
 
 function page() {
+    const[formData,setFormData]=useState({
+        username:'',
+        email:'',
+        password:''
+    });
+    const[error,setError]=useState(null)
+    const[success,setSuccess]=useState(false)
+
+     const handleChange = (e) =>{
+    setFormData((prev) => ({
+  ...prev,
+  [e.target.name]: e.target.value
+    }));
+  };
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError(null);
+  setSuccess(false);
+  try{
+   const res= await fetch('http://localhost:1337/api/auth/local/register', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(formData),
+      });
+
+    const data = await res.json();
+  if(!res.ok){
+    throw new Error(data.error?.message || 'Something went wrong');
+  }
+  setSuccess(true);
+  console.log('Registration successful:', data);
+    setFormData({
+      username: '',
+     email: '',
+     password: ''
+  });
+  }
+ 
+  catch(err){
+    setError(err.message);
+  }
+};
+
     return (
         <>
             <Navbar/>
@@ -25,19 +70,19 @@ function page() {
                                 <div className="col">
                                     <div className="card-body">
                                         <h5 className="card-title login-card-title">Create account</h5>
-                                        <form className='card-form mt-3'>
+                                        <form className='card-form mt-3' onSubmit={handleSubmit} >
                                             <div className='login-input-margin'>
-                                                <label className='mb-2' htmlFor="#">Phone</label>
-                                                <input type="text" className="form-control login-form-input " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                <label className='mb-2' htmlFor="#">Username</label>
+                                                <input type="text" className="form-control login-form-input " name="username"  value={formData.username} onChange={handleChange} placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
 
                                             <div className='login-input-margin '>
                                                 <label className='mb-2' htmlFor="#">E-mail</label>
-                                                <input type="text" className="form-control login-form-input  " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                <input type="text" className="form-control login-form-input " name="email"  value={formData.email} onChange={handleChange} placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
                                             <div className='login-input-margin '>
                                                 <label className='mb-2' htmlFor="#">Password</label>
-                                                <input type="password" className="form-control login-form-input  " placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                <input type="password" className="form-control login-form-input" name="password"  value={formData.password} onChange={handleChange} placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
                                             </div>
                                             <div className='login-btn-div login-input-margin'>
                                                 <button type='submit' className='login-btn'>Create Account</button>
@@ -52,7 +97,8 @@ function page() {
                                                     </svg>  </span>  
                                                     Signup with Google </button>
                                             </div>
-
+                                            {error && <p style={{ color: 'red' }}>{error}</p>}
+                                            {success && <p style={{ color: 'green' }}>Registration successful!</p>}
                                             <p className='text-center'> <span className='haveaccount'>Do you have an account ?</span> <Link href='/login' className='signup'>Login</Link></p>
                                         </form>
 
