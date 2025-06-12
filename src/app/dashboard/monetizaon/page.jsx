@@ -43,8 +43,8 @@ function Page() {
             <div className='d-flex justify-content-between w-100 my-2'>
               <h2 className='dash'>Monetizaon</h2>
               <div>
-                <button>demo text</button>
-                <button>demo text</button>
+                <button className='dash-btn'>demo text</button>
+                <button className='dash-btn'>demo text</button>
               </div>
             </div>
             <div className="row">

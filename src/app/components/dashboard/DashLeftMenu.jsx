@@ -22,12 +22,12 @@ function DashLeftMenu() {
         { label: <Link href="/dashboard/analytics">Analytics</Link>, icon: <RiDashboard3Line /> },
         { label: <Link href="/dashboard/monetizaon">Monetizaon</Link>, icon: <CiMoneyBill /> },
         { label: <Link href="/dashboard/monetization">Monetization</Link>, icon: <MdOutlineMonetizationOn /> },
-        { label: <Link href="/dashboard/phoin">phoin</Link>, icon:<MdOutlineMotionPhotosOn />},
-        { label: <Link href="/dashboard/prec">prec</Link>, icon: <VscSortPrecedence /> },
-        { label: <Link href="/dashboard/blog">blog</Link>, icon: <RiBloggerLine /> },
-        { label: <Link href="/dashboard/about">about</Link>, icon: <LuInfo /> },
+        { label: <Link href="/dashboard/phoin">Phoin</Link>, icon:<MdOutlineMotionPhotosOn />},
+        { label: <Link href="/dashboard/prec">Prec</Link>, icon: <VscSortPrecedence /> },
+        { label: <Link href="/dashboard/blog">Blog</Link>, icon: <RiBloggerLine /> },
+        { label: <Link href="/dashboard/about">About</Link>, icon: <LuInfo /> },
          { label: <Link href="/dashboard/users">Users</Link>, icon: <PiSignIn /> },
-        { label: <Link href="/dashboard/settings">settings</Link>, icon: <IoSettingsOutline /> },
+        { label: <Link href="/dashboard/settings">Settings</Link>, icon: <IoSettingsOutline /> },
     ];
 
     return (

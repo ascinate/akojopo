@@ -11,11 +11,10 @@ import DashLeftMenu from '../components/dashboard/DashLeftMenu';
 
 function Page() {
 
-
-
+    
     const menuNavItems = [
         {
-            name: "Home",
+            name: "Latest Post",
             text: <HomeCard />,
 
         },
@@ -27,11 +26,9 @@ function Page() {
             name: "Contact",
             text: "Contact",
         }
-
     ];
 
-    const [activeTab, setActiveTab] = useState('')
-
+    const [activeTab, setActiveTab] = useState("Latest Post")
 
     return (
         <>
@@ -40,8 +37,9 @@ function Page() {
                 <section className="dash-section float-start w-100 position-relative">
                     <div className="container">
                         <h2 className='dash'>Dashboard</h2>
+
                         <div className="row">
-                            <aside className='col-lg-3'>
+                            <aside className='col-lg-3 dash-margin'>
                                 <DashLeftMenu />
                             </aside>
 
@@ -49,8 +47,13 @@ function Page() {
                                 <ul className='nav dash-tabs d-flex justify-content-between gap-4 mx-2' id="myTab" role="tablist">
                                     {menuNavItems.map((tab) => {
                                         return (
-                                            <li key={tab.name} onClick={() => setActiveTab(tab.name)} className={activeTab === tab.name ? 'tab active' : ''}>
-                                                {tab.name}
+                                            <li key={tab.name}>
+                                                <button
+                                                    onClick={() => setActiveTab(tab.name)}
+                                                    className={`tab ${activeTab === tab.name ? 'active' : ''}`}
+                                                >
+                                                    {tab.name}
+                                                </button>
                                             </li>
                                         )
                                     })}

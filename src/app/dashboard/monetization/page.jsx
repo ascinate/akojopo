@@ -11,79 +11,25 @@ import * as am5 from "@amcharts/amcharts5";
 import * as am5xy from "@amcharts/amcharts5/xy";
 import am5themes_Animated from "@amcharts/amcharts5/themes/Animated";
 import { useLayoutEffect } from "react";
+import AmChart from '@/app/components/dashboard/Monetization/AmChart';
 
 function Page() {
+  const [activeTab, setActiveTab] = useState("Chart");
+    const menuNavItems = [
+    {
+      name: "Chart",
+      text: <AmChart/>,
 
-  useLayoutEffect(() => {
-    let root = am5.Root.new("chartdiv");
-
-    root.setThemes([am5themes_Animated.new(root)]);
-
-    let chart = root.container.children.push(
-      am5xy.XYChart.new(root, {
-        panX: true,
-        panY: true,
-        wheelX: "panX",
-        wheelY: "zoomX",
-      })
-    );
-
-    let xAxis = chart.xAxes.push(
-      am5xy.CategoryAxis.new(root, {
-        categoryField: "category",
-        renderer: am5xy.AxisRendererX.new(root, {}),
-      })
-    );
-
-    let yAxis = chart.yAxes.push(
-      am5xy.ValueAxis.new(root, {
-        renderer: am5xy.AxisRendererY.new(root, {}),
-      })
-    );
-
-    let series = chart.series.push(
-      am5xy.LineSeries.new(root, {
-        name: "Line Series",
-        xAxis: xAxis,
-        yAxis: yAxis,
-        valueYField: "value",
-        categoryXField: "category",
-        tooltip: am5.Tooltip.new(root, {
-          labelText: "{valueY}",
-        }),
-      })
-    );
-
-    xAxis.data.setAll([
-      { category: "A", value: 30 },
-      { category: "B", value: 55 },
-      { category: "C", value: 80 },
-    ]);
-
-    series.data.setAll([
-      { category: "A", value: 30 },
-      { category: "B", value: 55 },
-      { category: "C", value: 80 },
-    ]);
-
-    series.strokes.template.setAll({
-      strokeWidth: 2,
-    });
-
-    series.bullets.push(() =>
-      am5.Bullet.new(root, {
-        sprite: am5.Circle.new(root, {
-          radius: 5,
-          fill: series.get("fill"),
-        }),
-      })
-    );
-
-    return () => {
-      root.dispose();
-    };
-  }, []);
-
+    },
+    {
+      name: "profile",
+      text: "profile",
+    },
+    {
+      name: "Contact",
+      text: "Contact",
+    }
+  ];
 
   return (
     <>
@@ -93,7 +39,7 @@ function Page() {
           <div className="container">
             <div className='d-flex justify-content-between w-100'>
               <h2 className='dash'>Monetization</h2>
-              <select name="" id="" className='w-25'>
+              <select name="" id="" className='w-25 dash-select'>
                 <option value="">option</option>
               </select>
 
@@ -107,33 +53,27 @@ function Page() {
               </aside>
 
               <div className='col-lg-9 '>
-                <ul className="nav nav-tabs" id="myTab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                  </li>
+                <ul className='nav dash-tabs d-flex justify-content-between gap-4 mx-2' id="myTab" role="tablist">
+                  {menuNavItems.map((tab) => {
+                    return (
+                       <li key={tab.name}>
+                        <button
+                          onClick={() => setActiveTab(tab.name)}
+                          className={`tab ${activeTab === tab.name ? 'active' : ''}`}
+                        >
+                          {tab.name}
+                        </button>
+                      </li>
+                    )
+                  })}
 
                 </ul>
-                <div className='container '>
 
-                  <div className="tab-content dash-chart" id="myTabContent">
-                    <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <div id="chartdiv" style={{ width: "100%", height: "500px" }}></div>
-                    </div>
-
-
-
-                    <HomeCard />
-                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><HomeCard /></div>
-
-                  </div>
+                <div>
+                  {menuNavItems.map((tab) =>
+                    tab.name === activeTab ? <p key={tab.name}> {tab.text}</p>
+                      : null)}
                 </div>
-
-
-
-
               </div>
             </div>
           </div>
