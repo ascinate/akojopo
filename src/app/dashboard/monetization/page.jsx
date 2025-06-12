@@ -19,7 +19,6 @@ function Page() {
     {
       name: "Chart",
       text: <AmChart/>,
-
     },
     {
       name: "profile",

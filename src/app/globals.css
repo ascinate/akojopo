@@ -1678,7 +1678,7 @@ header {
 }
 
 
-.dash-btn{
+.dash-btn {
   margin-left: 20px;
   background-color: var(--theme-color);
   color: var(--background1);
@@ -1686,6 +1686,7 @@ header {
   border: none;
   padding: 12px 28px !important;
 }
+
 .dash-margin {
   margin-top: 20px;
 }
@@ -1724,7 +1725,8 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.dash-tabs li button:hover{
+
+.dash-tabs li button:hover {
   background-color: lightgray;
 }
 
@@ -1806,11 +1808,145 @@ header {
   }
 }
 
-.dash-select{
+.dash-select {
+  outline: none;
   border-radius: 8px;
   padding-inline: 10px;
   border: 1px solid gray;
 }
+
+.dash-input {
+  background-color: #F2F2F2;
+  outline: none;
+  border-radius: 8px;
+  padding-inline: 20px;
+  border: none;
+}
+
+
+.dash-blog-card {
+  margin-block: 20px;
+  padding: 20px;
+}
+
+.dash-blog-flex {
+  display: flex;
+  align-items: center;
+}
+
+.dash-blog-card-image {
+  border-radius: 8px;
+}
+
+.dash-blog-card-icon {
+  width: 10%;
+
+  & svg {
+    font-size: 25px;
+  }
+}
+
+
+.blog-form li{
+margin-bottom: 20px;
+}
+
+.handleUploadBlogImage{
+  aspect-ratio: 1;
+border: 5px solid var(--secondary-theme-color);
+  border-radius: 8px;
+}
+.handleUploadBlogImageInput{
+  display: none;
+}
+
+
+
+
+.handleUploadBlogImage {
+  width: 200px;
+  height: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.handleUploadBlogImageInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.uploaded-image-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* 
+.handleUploadBlogImage {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+} */
+
+.handleUploadBlogImageInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.uploaded-image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.image-preview-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.image-delete-btn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 12px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+
+
+
+
 
 
 
