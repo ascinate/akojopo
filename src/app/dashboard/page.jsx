@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Link from 'next/link';
 //component
 import Navbar from '../components/Navbar'
 import HomeCard from '../components/dashboard/HomeCard';
@@ -33,9 +34,17 @@ function Page() {
     return (
         <>
             <Navbar />
-            <main className="float-start w-100 maind-body">
-                <section className="dash-section float-start w-100 position-relative">
+            <main className="float-start w-100 maind-body dashborad-bg120">
+                <section className="dash-section crm-pages-dashborad01 float-start w-100 position-relative">
                     <div className="container">
+
+                        <nav aria-label="breadcrumb">
+                            <ol className="breadcrumb mb-2">
+                                <li className="breadcrumb-item"><Link href="/">Home</Link></li>
+                                <li className="breadcrumb-item active">Dashboard</li>
+                            </ol>
+                        </nav>
+
                         <h2 className='dash'>Dashboard</h2>
 
                         <div className="row">

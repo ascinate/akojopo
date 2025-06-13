@@ -1146,6 +1146,7 @@ body{
   background: url(/public/bg-slider120.jpg) no-repeat;
   background-position: right top;
   padding-top: 80px;
+  padding-bottom: 70px;
 
 }
 
@@ -1253,9 +1254,13 @@ body{
 .bg-imh01 {
   position: absolute;
   right: 0;
-  top: -50px;
+  top: -2px;
+  text-align: right;
 }
-
+.bg-imh01 img{
+  width: 90%;
+  height: auto !important;
+}
 .hero-section .container {
   position: relative;
   z-index: 2;
@@ -1300,7 +1305,7 @@ header {
 
 .about-start0150 {
   background: #fff;
-  padding: 90px 0;
+  padding: 40px 0;
 }
 
 .fetures-div01-pages {
@@ -1363,7 +1368,7 @@ header {
 }
 
 .signup-textpaf figure {
-  height: 650px;
+  height: 740px;
   overflow: hidden;
 }
 
@@ -1451,7 +1456,32 @@ header {
 }
 
 
+/* dashboard page design */
 
+.dashborad-bg120{
+    background: #f8f8f8;
+    padding:40px 0;
+}
+.dashborad-bg120 .dashboard-left-menu{
+  background: var(--background1) !important;
+  border-radius: 0 !important;
+  box-shadow: #f3f3f3 1px 2px 20px;
+
+}
+.sideb-menus01{
+ box-shadow: 1px 2px 30px #ebebeb;
+ 
+}
+.sideb-menus01 ul{
+  padding:15px 0;
+  margin: 0;
+}
+.sideb-menus01 ul li a{
+  display: block;
+  padding:15px 25px;
+  border-bottom: solid 1px #f8f8f8;
+  color: var(--colortext);
+}
 @media(max-width:1181px) {}
 
 @media(max-width:1025px) {}
