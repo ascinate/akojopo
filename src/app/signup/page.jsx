@@ -11,7 +11,8 @@ function page() {
     const[formData,setFormData]=useState({
         username:'',
         email:'',
-        password:''
+        password:'',
+        user_type: ''
     });
     const[error,setError]=useState(null)
     const[success,setSuccess]=useState(false)
@@ -74,6 +75,19 @@ const handleSubmit = async (e) => {
                                             <div className='login-input-margin'>
                                                 <label className='mb-2' htmlFor="#">Username</label>
                                                 <input type="text" className="form-control login-form-input " name="username"  value={formData.username} onChange={handleChange} placeholder="" aria-label="Username" aria-describedby="addon-wrapping" />
+                                            </div>
+                                            <div className='login-input-margin'>
+                                            <label className='mb-2'>User Type</label>
+                                            <select
+                                                name="user_type"
+                                                className="form-control login-form-input"
+                                                value={formData.user_type}
+                                                onChange={handleChange}
+                                            >
+                                                <option value="">Select Type</option>
+                                                <option value="user">User</option>
+                                                <option value="author">Author</option>
+                                            </select>
                                             </div>
 
                                             <div className='login-input-margin '>

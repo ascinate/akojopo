@@ -1943,10 +1943,14 @@ border: 5px solid var(--secondary-theme-color);
   z-index: 99;
 }
 
+.DashLeftMenuUsersIcon{
+  margin-left: 10px;
+}
 
-
-
-
+.dashlogin-containter{
+  padding-inline: 100px;
+}
+/* DashLeftMenuUsersIcon */
 
 
 

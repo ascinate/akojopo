@@ -75,7 +75,6 @@ const cardData = [
                     </select>
                   </div>
                 </div>
-
                 <div className="container">
                 {cardData.map((card, index) => (
                     <div className="card dashboard-card-style" key={index}>

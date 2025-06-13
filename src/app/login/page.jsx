@@ -87,7 +87,6 @@ function page() {
                             </div>
                            
                         </div>
-                   
                 </section>
             </main>
 
