@@ -1,9 +1,12 @@
 "use client"
-import DashLeftMenu from '@/app/components/dashboard/DashLeftMenu';
-import HomeCard from '@/app/components/dashboard/HomeCard';
-import Navbar from '@/app/components/Navbar';
-import React, { useState } from 'react'
+import * as React from 'react';
+import { DataGrid } from '@mui/x-data-grid';
+
+
 //component
+import Navbar from '@/app/components/Navbar';
+import DashLeftMenu from '@/app/components/dashboard/DashLeftMenu';
+import Image from 'next/image';
 
 
 
@@ -14,25 +17,19 @@ function Page() {
 
 
 
-  const menuNavItems = [
-    {
-      name: "Home",
-      text: <HomeCard />,
 
-    },
-    {
-      name: "profile",
-      text: "profile",
-    },
-    {
-      name: "Contact",
-      text: "Contact",
-    }
-
+  const columns = [
+    { field: 'id', headerName: 'ID', width: 90 },
+    { field: 'image', headerName: 'Image', width: 150 },
+    { field: 'name', headerName: 'Name', width: 150 },
+    { field: 'date', headerName: 'Date', width: 200 },
+    { field: 'categories', headerName: 'Categories', width: 100 },
   ];
 
-  const [activeTab, setActiveTab] = useState('')
-
+  const rows = [
+    { id: 1, image: <Image src="/" width={50} height={50} alt="image"/>, name: 'John Doe', date: "13/12/2025", categories: "author" },
+    { id: 2, name: 'Jane Smith', date: "08/10/2025", categories: "user" },
+  ];
 
   return (
     <>
@@ -47,20 +44,17 @@ function Page() {
               </aside>
 
               <div className='col-lg-9 '>
-                <ul className='nav dash-tabs d-flex justify-content-between gap-4 mx-2' id="myTab" role="tablist">
-                  {menuNavItems.map((tab) => {
-                    return (
-                      <li key={tab.name} onClick={() => setActiveTab(tab.name)} className={activeTab === tab.name ? 'tab active' : ''}>
-                        {tab.name}
-                      </li>
-                    )
-                  })}
-                </ul>
-                <div>
-                  {menuNavItems.map((tab) =>
-                    tab.name === activeTab ? <p key={tab.name}> {tab.text}</p>
-                      : null)}
+
+
+                <div style={{ height: 400, width: '100%' }}>
+                  <DataGrid
+                    rows={rows}
+                    columns={columns}
+                    pageSize={5}
+                    checkboxSelection
+                  />
                 </div>
+
               </div>
             </div>
           </div>
