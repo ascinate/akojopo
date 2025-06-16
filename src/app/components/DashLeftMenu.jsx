@@ -10,13 +10,10 @@ import { CiMoneyBill } from "react-icons/ci";
 
 function DashLeftMenu() {
     const mianmenu = [
-        { id: 1, title: 'Dashboard', href: '/', icon: <MdOutlineSpaceDashboard /> },
+        { id: 1, title: 'Dashboard', href: '/dashboard', icon: <MdOutlineSpaceDashboard /> },
         { id: 2, title: 'Analytics', href: '/analytics', icon: <RiDashboard3Line /> },
-        { id: 3, title: 'Monetizaon', href: '/monetizaon', icon: <CiMoneyBill /> },
-        { id: 4, title: 'Membership', href: '/membership', icon: <MdOutlineMonetizationOn /> },
-        { id: 5, title: 'Trending', href: '/trending', icon: <MdOutlineMotionPhotosOn /> },
-        { id: 6, title: 'User', href: '/user', icon: <VscSortPrecedence /> },
-        { id: 7, title: 'Settings', href: '/settings', icon: <VscSortPrecedence /> },
+        { id: 5, title: 'Trending', href: '/blog', icon: <MdOutlineMotionPhotosOn /> },
+        { id: 6, title: 'My Account', href: '/myaccount', icon: <VscSortPrecedence /> },
     ];
 
     
@@ -37,7 +34,7 @@ function DashLeftMenu() {
                                     href={page.href}
                                     className={`nav-link ${isActive ? 'active' : ''}`}
                                 >
-                                   <span>{page.icon}</span> {page.title}
+                                   <span className="arow-cions">{page.icon}</span> <span className="titels01"> {page.title} </span>
                                 </Link>
                             </li>
                         );
