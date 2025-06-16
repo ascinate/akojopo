@@ -1,8 +1,5 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-
-
-//image
 import features1 from '../assets/features1.webp'
 import features2 from '../assets/features2.webp'
 import features3 from '../assets/features3.webp'

@@ -32,11 +32,9 @@ function page() {
             const data = await res.json();
 
             if (res.ok) {
-                // ✅ Save token to localStorage or cookie
+                
                 localStorage.setItem('token', data.jwt);
                 localStorage.setItem('user', JSON.stringify(data.user));
-
-                // ✅ Redirect to dashboard or home
                 router.push('/');
             } else {
                 setError(data.error?.message || 'Login failed');

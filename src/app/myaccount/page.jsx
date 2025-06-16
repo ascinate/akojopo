@@ -1,4 +1,4 @@
-"use client"
+
 import DashLeftMenu from '../components/DashLeftMenu';
 import Navbar from '@/app/components/Navbar';
 import React from 'react';
