@@ -34,13 +34,27 @@ function HomeNavbar() {
         { id: 4, title: 'Membership', href: '/membership' },
         { id: 5, title: 'Trending', href: '/trending' },
     ];
-
+        const [scrolled, setScrolled] = useState(false);
+ 
+     useEffect(() => {
+        const handleScroll = () => {
+        const offset = window.scrollY;
+        setScrolled(offset > 50);
+        };
+ 
+        window.addEventListener('scroll', handleScroll);
+ 
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+ 
    
     return (
 
         
         <>
-        <header className="float-start w-100">
+        <header className={`float-start w-100 ${scrolled ? 'scrolled' : ''}`}>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container align-items-center">
                     <Link className="navbar-brand" href="/">
