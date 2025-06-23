@@ -35,7 +35,7 @@ function page() {
                 
                 localStorage.setItem('token', data.jwt);
                 localStorage.setItem('user', JSON.stringify(data.user));
-                router.push('/');
+                router.push('/dashboard');
             } else {
                 setError(data.error?.message || 'Login failed');
             }

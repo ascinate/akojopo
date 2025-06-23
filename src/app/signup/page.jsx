@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
   setError(null);
   setSuccess(false);
   try{
-   const res= await fetch('http://localhost:1337/api/auth/local/register', {
+   const res= await fetch('https://magical-friends-d2761de367.strapiapp.com/api/auth/local/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData),
