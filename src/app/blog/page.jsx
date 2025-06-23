@@ -11,6 +11,8 @@ import Link from 'next/link';
 
 function Page() {
   const [rows, setRows] = useState([]);
+  const [openModal, setOpenModal] = useState(false);
+
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -87,7 +89,14 @@ function Page() {
                 <div className='crm-box1 w-100'>
                   <div className='d-flex border-bt pt-3 pb-2 px-4 align-items-center w-100 justify-content-between'>
                     <h4 className='mb-0'> All Post </h4>
-                    <button type='button' className='btn btn-adds01'> Add Post </button>
+                    <button
+                      type='button'
+                      className='btn btn-adds01'
+                      onClick={() => setOpenModal(true)}
+                    >
+                      Add Post
+                    </button>
+
                   </div>
                   <div className='mt-3 mx-auto' style={{ height: 400, width: '95%' }}>
                     <DataGrid
@@ -104,6 +113,22 @@ function Page() {
           </div>
         </section>
       </main>
+      {openModal && (
+        <div className="modal fade show d-block" style={{ background: '#00000088' }}>
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content p-4">
+              <h4>Add New Post</h4>
+              {/* your form can go here or custom layout */}
+              <div className="d-flex justify-content-end">
+                <button className="btn btn-secondary" onClick={() => setOpenModal(false)}>
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
     </>
   );
 }
