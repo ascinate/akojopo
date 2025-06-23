@@ -21,6 +21,12 @@ function HomeNavbar() {
                 }
             }
         }, []);
+
+    const handleLogout = () => {
+        localStorage.removeItem("user");
+        setUser(null);
+        router.push("/login");
+    };
     const mianmenu = [
         { id: 1, title: 'Home', href: '/' },
         { id: 2, title: 'About', href: '/about' },
@@ -68,7 +74,11 @@ function HomeNavbar() {
                                         <li className="nav-link">
                                             {user.username || user.email}
                                         </li>
-                                       
+                                        <li>
+                                            <button className="btn btn-sm btn-danger ms-2" onClick={handleLogout}>
+                                                Logout
+                                            </button>
+                                        </li>
                                     </>
                                 ) : (
                                     <>
