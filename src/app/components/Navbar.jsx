@@ -21,12 +21,6 @@ function Navbar() {
         }
     }, []);
 
-    const handleLogout = () => {
-        localStorage.removeItem("user");
-        setUser(null);
-        router.push("/login");
-    };
-
     const mianmenu = [
         { id: 1, title: 'Home', href: '/' },
         { id: 2, title: 'About', href: '/about' },

@@ -1,10 +1,26 @@
 'use client';
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { FaBars } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
 function HomeNavbar() {
+
+        const pathname = usePathname();
+        const router = useRouter();
+        const [user, setUser] = useState(null);
+    
+        useEffect(() => {
+            const storedUser = localStorage.getItem("user");
+            if (storedUser) {
+                try {
+                    setUser(JSON.parse(storedUser));
+                } catch (error) {
+                    console.error("Failed to parse user:", error);
+                }
+            }
+        }, []);
     const mianmenu = [
         { id: 1, title: 'Home', href: '/' },
         { id: 2, title: 'About', href: '/about' },
@@ -13,11 +29,7 @@ function HomeNavbar() {
         { id: 5, title: 'Trending', href: '/trending' },
     ];
 
-    const mianright = [
-        { id: 7, title: 'Login', href: '/login' },
-        { id: 8, title: 'Signup', href: '/signup' },
-    ];
-    const pathname = usePathname();
+   
     return (
 
         
@@ -50,21 +62,34 @@ function HomeNavbar() {
                         </ul>
 
                         <div className="right-menus01">
-                            <ul className="d-flex align-items-center m-0">
-                               {mianright.map((page) => {
-                                const isActive = pathname === page.href;
-
-                                    return (
-                                        <li key={page.id}>
+                              <ul className="d-flex align-items-center m-0">
+                                {user ? (
+                                    <>
+                                        <li className="nav-link">
+                                            {user.username || user.email}
+                                        </li>
+                                       
+                                    </>
+                                ) : (
+                                    <>
+                                        <li>
                                             <Link
-                                                href={page.href}
-                                                className={`nav-link ${isActive ? 'active' : ''}`}
+                                                href="/login"
+                                                className={`nav-link ${pathname === '/login' ? 'active' : ''}`}
                                             >
-                                                {page.title}
+                                                Login
                                             </Link>
                                         </li>
-                                    );
-                                })}
+                                        <li>
+                                            <Link
+                                                href="/signup"
+                                                className={`nav-link ${pathname === '/signup' ? 'active' : ''}`}
+                                            >
+                                                Signup
+                                            </Link>
+                                        </li>
+                                    </>
+                                )}
                             </ul>
                         </div>
                     </div>
