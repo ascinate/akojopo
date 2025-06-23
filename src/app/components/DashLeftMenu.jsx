@@ -15,7 +15,11 @@ function DashLeftMenu() {
         { id: 5, title: 'Trending', href: '/blog', icon: <MdOutlineMotionPhotosOn /> },
         { id: 6, title: 'My Account', href: '/myaccount', icon: <VscSortPrecedence /> },
     ];
-
+  const handleLogout = () => {
+        localStorage.removeItem("user");
+        setUser(null);
+        router.push("/login");
+    };
     
     const pathname = usePathname();
     return (
@@ -42,7 +46,7 @@ function DashLeftMenu() {
 
                 </ul>
                 <div className="btn-grous01-div">
-                     <button className="btn btn-groups01"> <MdLogout/> Logout </button>
+                     <button className="btn btn-groups01" onClick={handleLogout}> <MdLogout/> Logout </button>
                 </div>
             </div>
         </aside>

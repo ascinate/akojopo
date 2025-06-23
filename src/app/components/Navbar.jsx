@@ -69,11 +69,7 @@ function Navbar() {
                                         <li className="nav-link">
                                             {user.username || user.email}
                                         </li>
-                                        <li>
-                                            <button className="btn btn-sm btn-danger ms-2" onClick={handleLogout}>
-                                                Logout
-                                            </button>
-                                        </li>
+                                       
                                     </>
                                 ) : (
                                     <>
