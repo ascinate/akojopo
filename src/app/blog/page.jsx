@@ -18,61 +18,63 @@ function Page() {
 
   const API_URL = 'https://magical-friends-d2761de367.strapiapp.com/api/articles';
 
+  // Fetch all articles on load
   useEffect(() => {
     const fetchArticles = async () => {
       const res = await fetch(API_URL);
       const json = await res.json();
 
-      const formattedRows = json.data.map((article) => ({
-        id: article.id,
-        name: article.title,
-        date: new Date(article.createdAt).toLocaleDateString(),
-        excerpt: article.description,
-        comment: "0",
+      const formatted = json.data.map(item => ({
+        id: item.id,
+        name: item.attributes.title,
+        date: new Date(item.attributes.createdAt).toLocaleDateString(),
+        excerpt: item.attributes.description,
+        comment: '0',
       }));
 
-      setRows(formattedRows);
+      setRows(formatted);
     };
 
     fetchArticles();
   }, []);
 
-  const handleAddPost = async (e) => {
+  // Handle post submit
+  const handleSubmitPost = async (e) => {
     e.preventDefault();
-    if (!title || !description) return alert('Title and Description required');
+    if (!title || !description) return alert("All fields required");
+
     setLoading(true);
 
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          data: {
-            title,
-            description,
-          },
-        }),
+          data: { title, description }
+        })
       });
 
       const json = await res.json();
-      const newPost = json.data;
 
-      const newRow = {
-        id: newPost.id,
-        name: newPost.attributes.title,
-        date: new Date(newPost.attributes.createdAt).toLocaleDateString(),
-        excerpt: newPost.attributes.description,
-        comment: '0',
-      };
-
-      setRows((prev) => [newRow, ...prev]);
-      setOpenModal(false);
-      setTitle('');
-      setDescription('');
+      if (res.ok) {
+        const post = json.data;
+        const newRow = {
+          id: post.id,
+          name: post.attributes.title,
+          date: new Date(post.attributes.createdAt).toLocaleDateString(),
+          excerpt: post.attributes.description,
+          comment: '0',
+        };
+        setRows(prev => [newRow, ...prev]);
+        setTitle('');
+        setDescription('');
+        setOpenModal(false);
+      } else {
+        alert("Error: " + json?.error?.message || "Post failed");
+      }
     } catch (err) {
-      console.error('Post failed:', err);
+      console.error(err);
+      alert("Network error");
     } finally {
       setLoading(false);
     }
@@ -149,12 +151,13 @@ function Page() {
         </section>
       </main>
 
+      {/* Modal */}
       {openModal && (
         <div className="modal fade show d-block" style={{ background: '#00000088' }}>
           <div className="modal-dialog modal-dialog-centered">
             <div className="modal-content p-4">
               <h4>Add New Post</h4>
-              <form onSubmit={handleAddPost}>
+              <form onSubmit={handleSubmitPost}>
                 <div className="mb-3">
                   <label>Title</label>
                   <input type="text" className="form-control" value={title} onChange={e => setTitle(e.target.value)} />
