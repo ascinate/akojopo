@@ -18,7 +18,7 @@ function page() {
         e.preventDefault();
 
         try {
-            const res = await fetch('http://localhost:1337/api/auth/local', {
+            const res = await fetch('https://magical-friends-d2761de367.strapiapp.com/api/auth/local', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
