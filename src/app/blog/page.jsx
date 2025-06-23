@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import * as React from 'react';
 import { useState, useEffect } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
@@ -11,74 +11,29 @@ import Link from 'next/link';
 
 function Page() {
   const [rows, setRows] = useState([]);
-  const [openModal, setOpenModal] = useState(false);
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [loading, setLoading] = useState(false);
 
-  const API_URL = 'https://magical-friends-d2761de367.strapiapp.com/api/articles';
-
-  // Fetch all articles on load
   useEffect(() => {
     const fetchArticles = async () => {
-      const res = await fetch(API_URL);
-      const json = await res.json();
+      try {
+        const res = await fetch("https://magical-friends-d2761de367.strapiapp.com/api/articles");
+        const json = await res.json();
 
-      const formatted = json.data.map(item => ({
-        id: item.id,
-        name: item.attributes.title,
-        date: new Date(item.attributes.createdAt).toLocaleDateString(),
-        excerpt: item.attributes.description,
-        comment: '0',
-      }));
+        const formattedRows = json.data.map((article) => ({
+          id: article.id,
+          name: article.title,
+          date: new Date(article.createdAt).toLocaleDateString(),
+          excerpt: article.description,
+          comment: "0", // You can replace this with real data if available
+        }));
 
-      setRows(formatted);
+        setRows(formattedRows);
+      } catch (err) {
+        console.error("Failed to fetch articles:", err);
+      }
     };
 
     fetchArticles();
   }, []);
-
-  // Handle post submit
-  const handleSubmitPost = async (e) => {
-    e.preventDefault();
-    if (!title || !description) return alert("All fields required");
-
-    setLoading(true);
-
-    try {
-      const res = await fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          data: { title, description }
-        })
-      });
-
-      const json = await res.json();
-
-      if (res.ok) {
-        const post = json.data;
-        const newRow = {
-          id: post.id,
-          name: post.attributes.title,
-          date: new Date(post.attributes.createdAt).toLocaleDateString(),
-          excerpt: post.attributes.description,
-          comment: '0',
-        };
-        setRows(prev => [newRow, ...prev]);
-        setTitle('');
-        setDescription('');
-        setOpenModal(false);
-      } else {
-        alert("Error: " + json?.error?.message || "Post failed");
-      }
-    } catch (err) {
-      console.error(err);
-      alert("Network error");
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const columns = [
     {
@@ -128,12 +83,11 @@ function Page() {
               <aside className='col-lg-3'>
                 <DashLeftMenu />
               </aside>
-
-              <div className='col-lg-9'>
+              <div className='col-lg-9 '>
                 <div className='crm-box1 w-100'>
                   <div className='d-flex border-bt pt-3 pb-2 px-4 align-items-center w-100 justify-content-between'>
-                    <h4 className='mb-0'>All Post</h4>
-                    <button type='button' className='btn btn-adds01' onClick={() => setOpenModal(true)}>Add Post</button>
+                    <h4 className='mb-0'> All Post </h4>
+                    <button type='button' className='btn btn-adds01'> Add Post </button>
                   </div>
                   <div className='mt-3 mx-auto' style={{ height: 400, width: '95%' }}>
                     <DataGrid
@@ -150,33 +104,6 @@ function Page() {
           </div>
         </section>
       </main>
-
-      {/* Modal */}
-      {openModal && (
-        <div className="modal fade show d-block" style={{ background: '#00000088' }}>
-          <div className="modal-dialog modal-dialog-centered">
-            <div className="modal-content p-4">
-              <h4>Add New Post</h4>
-              <form onSubmit={handleSubmitPost}>
-                <div className="mb-3">
-                  <label>Title</label>
-                  <input type="text" className="form-control" value={title} onChange={e => setTitle(e.target.value)} />
-                </div>
-                <div className="mb-3">
-                  <label>Description</label>
-                  <textarea className="form-control" value={description} onChange={e => setDescription(e.target.value)}></textarea>
-                </div>
-                <div className="d-flex justify-content-between">
-                  <button type="submit" className="btn btn-primary" disabled={loading}>
-                    {loading ? 'Posting...' : 'Post'}
-                  </button>
-                  <button type="button" className="btn btn-secondary" onClick={() => setOpenModal(false)}>Cancel</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }
